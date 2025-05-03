@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-geist-sans), sans-serif; /* Use CSS variable for base font */
+}
+
+@layer base {
+  :root {
+    --background: 210 40% 98%; /* Light mode background (kept for toggle) */
+    --foreground: 224 71% 4%; /* Light mode foreground */
+    --card: 210 40% 98%; /* Light mode card */
+    --card-foreground: 224 71% 4%; /* Light mode card foreground */
+    --popover: 210 40% 98%; /* Light mode popover */
+    --popover-foreground: 224 71% 4%; /* Light mode popover foreground */
+    --primary: 30 90% 55%; /* Saffron orange accent */
+    --primary-foreground: 0 0% 0%; /* Black for primary button text */
+    --secondary: 215 28% 93%; /* Light mode secondary */
+    --secondary-foreground: 224 71% 4%; /* Light mode secondary foreground */
+    --muted: 215 28% 93%; /* Light mode muted */
+    --muted-foreground: 215 20% 45%; /* Light mode muted foreground */
+    --accent: 215 28% 93%; /* Light mode accent */
+    --accent-foreground: 224 71% 4%; /* Light mode accent foreground */
+    --destructive: 0 84% 60%; /* Light mode destructive */
+    --destructive-foreground: 210 40% 98%; /* Light mode destructive foreground */
+    --border: 215 20% 87%; /* Light mode border */
+    --input: 215 20% 87%; /* Light mode input */
+    --ring: 30 90% 55%; /* Saffron orange for ring */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    /* Font variables added by next/font */
+    /* --font-geist-sans: ...; */
+    /* --font-noto-sans-devanagari: ...; */
+  }
+
+  .dark {
+    --background: 224 71% 4%; /* Deep Blue/Black Background */
+    --foreground: 210 40% 98%; /* Light Gray/White Foreground */
+    --card: 224 71% 8%; /* Slightly lighter card background */
+    --card-foreground: 210 40% 98%; /* Card foreground */
+    --popover: 224 71% 4%; /* Popover background */
+    --popover-foreground: 210 40% 98%; /* Popover foreground */
+    --primary: 30 90% 55%; /* Saffron orange accent */
+    --primary-foreground: 0 0% 0%; /* Black for primary button text */
+    --secondary: 224 50% 15%; /* Dark secondary */
+    --secondary-foreground: 210 40% 98%; /* Dark secondary foreground */
+    --muted: 224 50% 15%; /* Dark muted */
+    --muted-foreground: 215 20% 65%; /* Dark muted foreground */
+    --accent: 224 50% 15%; /* Dark accent */
+    --accent-foreground: 210 40% 98%; /* Dark accent foreground */
+    --destructive: 0 63% 31%; /* Dark destructive */
+    --destructive-foreground: 210 40% 98%; /* Dark destructive foreground */
+    --border: 215 28% 17%; /* Dark border */
+    --input: 215 28% 17%; /* Dark input */
+    --ring: 30 90% 55%; /* Saffron orange for ring */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    /* Sidebar vars remain for now, though not explicitly used in request */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* Add subtle cosmic nebulae effect if desired - consider performance */
+    /* background-image: radial-gradient(circle at center, hsla(224, 71%, 15%, 0.5) 0%, hsla(224, 71%, 4%, 0) 70%); */
+  }
+}
+
+/* Add utility class for Devanagari font */
+@layer utilities {
+  .font-noto_sans_devanagari {
+    font-family: var(--font-noto-sans-devanagari), sans-serif; /* Use CSS variable */
+  }
+}
