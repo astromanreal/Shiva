@@ -1,54 +1,39 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import TodaysRead from '@/components/home/todays-read'; // Import the new component
 import {
-  ArrowRight, Users, BrainCircuit, Sparkles, Heart, Gem, Mountain, Waves, Eye, Moon, Flame,
-  Shield, Calendar, Star, Users2, Crown, Clock, Zap, Dna, BookOpen, Swords, Atom // Added more icons
+  ArrowRight, Users, Sparkles, Heart, Gem, Mountain, BookOpen, Flame,
+  Shield, Calendar, Star, Users2, Crown, Clock, Zap, Dna, Swords, Atom
 } from 'lucide-react';
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center text-center space-y-16"> {/* Increased spacing */}
-      {/* Hero Section */}
-      <section className="w-full py-20 md:py-32 relative overflow-hidden rounded-lg shadow-xl bg-gradient-to-br from-secondary via-background to-secondary">
-         {/* Optional: Add subtle background image or effect here */}
-         {/* Example: Animated Nataraja or rotating Trishul could be positioned absolutely */}
-         {/* <div className="absolute inset-0 z-0 opacity-10"> ... animation component ... </div> */}
+      {/* Hero Section - Redesigned without Image */}
+       <section className="w-full py-16 md:py-24 relative overflow-hidden">
+         {/* Subtle background effect */}
+         <div className="absolute inset-0 z-0 opacity-10 bg-gradient-radial from-primary/10 via-transparent to-transparent"></div>
 
-        <div className="container relative z-10 px-4 md:px-6">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-primary mb-4">
+        <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center">
+            {/* Removed Image Section */}
+
+          <h1 className="text-5xl font-bold tracking-tighter sm:text-6xl md:text-7xl lg:text-8xl text-primary mb-3 font-noto_sans_devanagari">
             ॐ नमः शिवाय
           </h1>
-           <p className="font-noto_sans_devanagari text-lg text-foreground/80 mb-4">(Om Namah Shivaya)</p>
-          <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl mb-8">
-            Salutations to the Auspicious One! Welcome to ShivaSphere, your digital gateway to the wisdom, power, and divinity of Mahadeva – The Great God.
+           <p className="font-sans text-lg text-foreground/80 mb-6">(Om Namah Shivaya)</p>
+          <p className="max-w-[700px] text-foreground/80 md:text-xl leading-relaxed"> {/* Removed mx-auto as parent is centered */}
+            Salutations to the Auspicious One! Welcome to ShivaSphere, your digital gateway to the wisdom, power, and divinity of Mahadeva – The Great God. Explore the profound depths of Shaivism and the eternal presence of Shiva.
           </p>
-           {/* Placeholder for Hero Image/Animation */}
-           <div className="relative w-full max-w-md mx-auto h-64 mb-8 flex items-center justify-center bg-muted/30 rounded-lg border border-border">
-             <Image
-               src="https://drive.google.com/file/d/1xL-JlRVuiWnwM2fH2VgZzuTNCDO2L878/view?usp=drive_link" // Updated Google Drive link
-               alt="Meditating Shiva Placeholder"
-               width={400}
-               height={250}
-               className="object-cover rounded-md opacity-70"
-               data-ai-hint="meditating shiva himalayas"
-               priority // Load hero image first
-             />
-             <p className="absolute inset-0 flex items-center justify-center text-foreground/60 text-sm">
-               [Meditating Shiva / Nataraja / Trishul Placeholder]
-             </p>
-           </div>
-          <div className="flex justify-center">
-             <Link href="/ask-mahadev">
-               <Button size="lg">
-                 Ask Mahadev <ArrowRight className="ml-2 h-5 w-5" />
-               </Button>
-             </Link>
-          </div>
+          {/* Removed Ask Mahadev Button */}
         </div>
       </section>
+
+      {/* Today's Read Section */}
+      <TodaysRead />
 
        {/* Mahadeva Detailed Aspects Section */}
        <section className="w-full max-w-6xl space-y-8">
@@ -194,22 +179,25 @@ export default function Home() {
               </CardContent>
             </Card>
           </Link>
-           <Link href="/ask-mahadev" className="block hover:scale-[1.02] transition-transform duration-200 md:col-span-2 group">
-             <Card className="h-full flex flex-col justify-between transition-shadow hover:shadow-lg hover:border-primary/30">
+           {/* Updated Ask Mahadev Link/Card - Show as unavailable */}
+           <div className="block md:col-span-2 group cursor-not-allowed">
+             <Card className="h-full flex flex-col justify-between border-dashed border-muted-foreground/50 bg-muted/20 opacity-70">
                <CardHeader>
-                 <CardTitle className="flex items-center gap-2">
-                   <BrainCircuit className="h-6 w-6 text-primary" />
-                   Ask Mahadev (AI)
+                 <CardTitle className="flex items-center gap-2 text-left text-muted-foreground">
+                   <Sparkles className="h-6 w-6 text-muted-foreground" />
+                   Ask Mahadev (AI) - Unavailable
                  </CardTitle>
                </CardHeader>
                <CardContent>
-                 <p className="text-muted-foreground mb-4">Seek wisdom directly. Ask our AI assistant your spiritual questions (Currently Unavailable).</p>
-                 <span className="text-primary font-semibold flex items-center group-hover:underline">
+                 <p className="text-muted-foreground mb-4 text-left">
+                   Feature Unavailable: The "Ask Mahadev" AI assistant is currently undergoing maintenance and is temporarily unavailable. Please check back later. We apologize for any inconvenience.
+                 </p>
+                 <span className="text-muted-foreground font-semibold flex items-center opacity-50">
                    Try Asking <ArrowRight className="ml-1 h-4 w-4" />
                  </span>
                </CardContent>
              </Card>
-           </Link>
+           </div>
         </div>
       </section>
 

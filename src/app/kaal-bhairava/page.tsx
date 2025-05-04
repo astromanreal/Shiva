@@ -1,3 +1,6 @@
+'use client'; // Add 'use client' directive
+
+import React, { useRef } from 'react'; // Import React and useRef
 import Image from 'next/image';
 import { getKaalBhairavaData } from '@/data/kaal-bhairava';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
@@ -5,9 +8,10 @@ import { Badge } from '@/components/ui/badge';
 import { Zap, Shield, Clock, Bone, Sparkles, BookOpen, SquareTerminal } from 'lucide-react'; // Relevant icons
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { cn } from '@/lib/utils'; // Import the cn function
-import React from 'react'; // Import React for Fragment
 import { getAllKaalBhairavaImages } from '@/data/kaal-bhairava-images'; // Import image data
-import KaalBhairavaClient from './kaal-bhairava-client'; // Import the new client component
+// Remove the client component import: import KaalBhairavaClient from './kaal-bhairava-client';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"; // Import Carousel components
+import Autoplay from "embla-carousel-autoplay"; // Import Autoplay plugin
 
 // Helper to render text with Devanagari font styling
 const SanskritText: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
@@ -30,27 +34,36 @@ export default function KaalBhairavaPage() {
   const data = getKaalBhairavaData();
   const images = getAllKaalBhairavaImages(); // Fetch image data
 
+  // Add carousel logic from the client component
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
   return (
     <div className="max-w-5xl mx-auto space-y-12 p-4">
       {/* Hero Section */}
       <section className="relative text-center py-16 md:py-24 bg-gradient-to-b from-background to-secondary/30 rounded-lg overflow-hidden border border-border shadow-lg">
-        <div className="absolute inset-0 z-0 opacity-10">
-             {/* Subtle background pattern or image could go here */}
+        <div className="absolute inset-0 z-0 opacity-25"> {/* Increased opacity from 15 to 25 */}
+             {/* Updated background image with provided link */}
              <Image
-                src={`https://picsum.photos/seed/${data.id}-bg/1200/400`} // Placeholder background
-                alt="Abstract background"
-                fill={true} // Use fill instead of layout="fill"
-                style={{objectFit: 'cover'}} // Use style object for objectFit
-                className="filter blur-sm"
-                data-ai-hint="dark cosmic texture abstract"
+                src="https://drive.google.com/uc?export=view&id=1LTj25wPQ8WoV53LgF6ySVY0qVVX8Ub1R" // Updated image link
+                alt="Kaal Bhairava Representation" // Updated alt text
+                fill={true}
+                style={{objectFit: 'cover'}}
+                className="filter blur-sm scale-110" // Added slight scale and blur
+                data-ai-hint="kaal bhairava fierce deity dark background" // Updated hint
+                priority // Prioritize loading
              />
+             {/* Optional gradient overlay */}
+             <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/30"></div>
         </div>
         <div className="container relative z-10 px-4 md:px-6 space-y-4">
             <SanskritText text={data.title} className="text-4xl md:text-6xl font-bold tracking-tight text-primary mb-2 font-noto_sans_devanagari" />
             <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-primary mb-4">
               {data.title.split('(')[0].trim()} - The Lord of Time & Fearlessness
             </h1>
-            <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
+             {/* Updated description using the new data */}
+             <p className="max-w-[700px] mx-auto text-foreground/80 md:text-xl">
               {data.description}
             </p>
             <div className="flex justify-center pt-4">
@@ -59,9 +72,41 @@ export default function KaalBhairavaPage() {
         </div>
       </section>
 
-       {/* Image Slider Section (Client Component) */}
+       {/* Image Slider Section (Now integrated) */}
        <section className="w-full max-w-3xl mx-auto">
-           <KaalBhairavaClient images={images} />
+            <Carousel
+                plugins={[plugin.current]}
+                opts={{
+                    loop: true, // Enable looping
+                }}
+                className="w-full"
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
+            >
+                <CarouselContent>
+                    {images.map((image) => (
+                        <CarouselItem key={image.id}>
+                            <div className="p-1">
+                                <Card className="overflow-hidden">
+                                    <CardContent className="flex aspect-video items-center justify-center p-0">
+                                        <Image
+                                            src={image.src}
+                                            alt={image.alt}
+                                            width={600}
+                                            height={400}
+                                            className="object-cover w-full h-full"
+                                            data-ai-hint={image.aiHint}
+                                            priority={image.id <= 2} // Prioritize first couple of images
+                                        />
+                                    </CardContent>
+                                </Card>
+                            </div>
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+            </Carousel>
        </section>
 
 

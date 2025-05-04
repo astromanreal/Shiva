@@ -4,6 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { getAllMahadevRup } from '@/data/mahadev-rup';
 import { ArrowRight, Sparkles, Users, Star, Layers, Atom } from 'lucide-react'; // Added more icons
 
+// Define mapping for featured form images using direct view URLs
+const featuredImageMap: Record<string, string> = {
+  parashiva: "https://drive.google.com/uc?export=view&id=1M8XwF8bSq9YYsvcfiGBKgldqExbLQI6h",
+  sadasiva: "https://drive.google.com/uc?export=view&id=1do-bvQPcvPYFx7dFOryNY-GZtDYbHoyR",
+  panchabrahma: "https://drive.google.com/uc?export=view&id=1MO7ZFks121wT0ILemvy9wcNEwWgoQj19",
+};
+
+
 export default function MahadevRupPage() {
   const allForms = getAllMahadevRup();
 
@@ -38,7 +46,8 @@ export default function MahadevRupPage() {
                  <CardHeader className="relative z-10 pb-3">
                    <div className="mb-4 overflow-hidden rounded-md aspect-video relative">
                      <Image
-                       src={`https://picsum.photos/seed/${form.id}-featured/400/225`} // Placeholder image
+                       // Use the specific Google Drive link from the map, fallback to placeholder if needed
+                       src={featuredImageMap[form.id] || `https://picsum.photos/seed/${form.id}-featured/400/225`}
                        alt={form.name}
                        width={400}
                        height={225}
@@ -82,7 +91,7 @@ export default function MahadevRupPage() {
                    <CardHeader>
                      <div className="mb-4 overflow-hidden rounded-md aspect-video relative">
                        <Image
-                         src={`https://picsum.photos/seed/${form.id}/400/225`} // Placeholder image
+                         src={`https://picsum.photos/seed/${form.id}/400/225`} // Placeholder image for other forms
                          alt={form.name}
                          width={400}
                          height={225}

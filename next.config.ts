@@ -21,9 +21,15 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'drive.google.com',
         port: '',
-        // Allow both /uc/** and /file/** paths for Google Drive images
-        pathname: '/**',
+        // Allow direct image view paths for Google Drive images
+        pathname: '/uc', // Specifically allow /uc path used for direct image links
       },
+       { // Keep the broader rule if other /file paths are used elsewhere, otherwise remove
+         protocol: 'https',
+         hostname: 'drive.google.com',
+         port: '',
+         pathname: '/file/**',
+       },
 
     ],
   },

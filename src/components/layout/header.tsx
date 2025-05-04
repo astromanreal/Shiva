@@ -4,7 +4,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Moon, Sun, Mail, Menu, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Moon, Sun, Mail, Menu, ChevronLeft, ChevronRight, Compass } from 'lucide-react'; // Added Compass for Explore
 // import { useTheme } from 'next-themes'; // Assuming next-themes is installed for theme toggling
 
 import { Button } from '@/components/ui/button';
@@ -78,11 +78,28 @@ interface NavLinkProps {
   href: string;
   children: React.ReactNode;
   onClick?: () => void; // For closing mobile menu
+  isIcon?: boolean; // Flag for icon links
 }
 
-const NavLink: React.FC<NavLinkProps> = ({ href, children, onClick }) => {
+const NavLink: React.FC<NavLinkProps> = ({ href, children, onClick, isIcon = false }) => {
   const pathname = usePathname();
   const isActive = pathname === href || (href !== '/' && pathname.startsWith(href));
+
+  if (isIcon) {
+    return (
+      <Link
+        href={href}
+        className={cn(
+          'relative transition-colors duration-200 hover:text-foreground text-sm font-medium whitespace-nowrap px-2 py-1.5 rounded-md flex-shrink-0', // Adjusted padding for icon
+          isActive ? 'text-primary' : 'text-foreground/60',
+        )}
+        onClick={onClick}
+        aria-label={typeof children === 'string' ? children : undefined} // Use children as label if string
+      >
+        {children}
+      </Link>
+    );
+  }
 
   return (
     <Link
@@ -101,7 +118,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, onClick }) => {
   );
 };
 
-const ITEMS_PER_VIEW = 5; // Keep the number of items visible
+const ITEMS_PER_VIEW = 4; // Adjust number of visible items if needed
 const SCROLL_STEP = 2; // Number of items to scroll on click
 
 export default function Header() {
@@ -109,7 +126,8 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [startIndex, setStartIndex] = React.useState(0); // For desktop nav slider
 
-  const navItems = [
+  // Define all potential navigation items
+  const allNavItems = [
     { href: '/avatars', label: 'Avatars' },
     { href: '/rudras', label: 'Rudras' },
     { href: '/events', label: 'Events' },
@@ -121,29 +139,24 @@ export default function Header() {
     { href: '/mantras', label: 'Mantras' },
     { href: '/maa-kali', label: 'Maa Kali' },
     { href: '/yoga', label: 'Yoga' },
-    { href: '/asanas', label: 'Asanas' }, // Added Asanas
-    { href: '/mudras', label: 'Mudras' }, // Added Mudras
-    { href: '/pranayama', label: 'Pranayama' },
-    { href: '/surya-namaskar', label: 'Surya Namaskar' }, // Added Surya Namaskar
     { href: '/meditation', label: 'Meditation' },
-    // Moved Ask Mahadev to the right side near icons
+    // Ask Mahadev is handled separately
+    // Explore is handled separately
   ];
 
-  const canScrollPrev = startIndex > 0;
-  // Allow scrolling next if the start index plus items per view is less than total items
-  const canScrollNext = startIndex + ITEMS_PER_VIEW < navItems.length;
+  const navItems = allNavItems; // Use the already filtered list
 
+  const totalItems = navItems.length;
+  const canScrollPrev = startIndex > 0;
+  const canScrollNext = startIndex < totalItems - ITEMS_PER_VIEW;
 
   const handlePrev = () => {
-    // Scroll back by SCROLL_STEP items
     setStartIndex(Math.max(0, startIndex - SCROLL_STEP));
   };
 
   const handleNext = () => {
-     // Scroll forward by SCROLL_STEP items
-     setStartIndex(Math.min(navItems.length - ITEMS_PER_VIEW, startIndex + SCROLL_STEP));
+     setStartIndex(Math.min(totalItems - ITEMS_PER_VIEW, startIndex + SCROLL_STEP));
   };
-
 
   const visibleNavItems = navItems.slice(startIndex, startIndex + ITEMS_PER_VIEW);
 
@@ -159,58 +172,68 @@ export default function Header() {
         </Link>
 
         {/* Desktop Navigation Slider */}
-         <div className="hidden md:flex flex-grow items-center justify-start ml-4 overflow-hidden">
-            <Button
+         <div className="hidden md:flex flex-grow items-center justify-center mx-auto relative">
+             {/* Previous Button */}
+             <Button
                 variant="ghost"
-                size="sm" // Make button slightly smaller
-                className="h-8 w-8 mr-2 rounded-full hover:bg-accent/80 transition-colors" // Rounded, subtle hover
+                size="icon"
+                className={cn(
+                    "h-8 w-8 rounded-full text-foreground/60 hover:text-foreground hover:bg-accent/80 mr-1 transition-opacity",
+                    !canScrollPrev && "opacity-30 pointer-events-none"
+                )}
                 onClick={handlePrev}
                 disabled={!canScrollPrev}
                 aria-label="Previous navigation items"
             >
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="h-5 w-5" />
             </Button>
-            {/* Use a div to contain the links and prevent layout shift */}
-            <div className="flex-grow overflow-hidden">
-                <nav className="flex items-center gap-x-1 transition-transform duration-300 ease-in-out"> {/* Reduced gap */}
-                  {visibleNavItems.map((item) => (
-                    <NavLink key={item.href} href={item.href}>{item.label}</NavLink>
-                  ))}
-                </nav>
-            </div>
-             <Button
+
+             {/* Navigation Links Container */}
+             <div className="flex-shrink overflow-hidden">
+                 <nav className="flex items-center justify-center gap-x-1 transition-transform duration-300 ease-in-out">
+                   {visibleNavItems.map((item) => (
+                     <NavLink key={item.href} href={item.href}>{item.label}</NavLink>
+                   ))}
+                 </nav>
+             </div>
+
+            {/* Next Button */}
+            <Button
                 variant="ghost"
-                size="sm" // Make button slightly smaller
-                className="h-8 w-8 ml-2 rounded-full hover:bg-accent/80 transition-colors" // Rounded, subtle hover
+                size="icon"
+                className={cn(
+                    "h-8 w-8 rounded-full text-foreground/60 hover:text-foreground hover:bg-accent/80 ml-1 transition-opacity",
+                     !canScrollNext && "opacity-30 pointer-events-none"
+                )}
                 onClick={handleNext}
                 disabled={!canScrollNext}
                 aria-label="Next navigation items"
             >
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-5 w-5" />
             </Button>
-        </div>
+         </div>
 
-
-        {/* Right side icons (Desktop) - Push to the end */}
-        <div className="hidden md:flex items-center justify-end space-x-1 ml-auto flex-shrink-0"> {/* Use ml-auto */}
-           {/* Ask Mahadev Link - Applied NavLink style */}
+        {/* Right side icons (Desktop) */}
+        <div className="hidden md:flex items-center justify-end space-x-1 ml-auto flex-shrink-0">
            <NavLink href="/ask-mahadev">Ask Mahadev</NavLink>
-          <Link href="/contact" aria-label="Contact">
-            <Button variant="ghost" size="icon">
-              <Mail className="h-[1.1rem] w-[1.1rem]" /> {/* Slightly smaller icons */}
-            </Button>
-          </Link>
+           {/* Explore Icon Link */}
+           <NavLink href="/explore" isIcon={true}>
+             <Compass className="h-[1.1rem] w-[1.1rem]" />
+           </NavLink>
+           <NavLink href="/contact" isIcon={true}>
+             <Mail className="h-[1.1rem] w-[1.1rem]" />
+           </NavLink>
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Trigger - Push to the end */}
-        <div className="flex flex-1 items-center justify-end md:hidden space-x-1 ml-auto flex-shrink-0"> {/* Use ml-auto */}
-           {/* Moved Contact and Theme toggle inside mobile view */}
-           <Link href="/contact" aria-label="Contact">
-            <Button variant="ghost" size="icon">
-              <Mail className="h-[1.1rem] w-[1.1rem]" />
-            </Button>
-          </Link>
+        {/* Mobile Menu Trigger */}
+        <div className="flex flex-1 items-center justify-end md:hidden space-x-1 ml-auto flex-shrink-0">
+           <NavLink href="/contact" isIcon={true}>
+             <Mail className="h-[1.1rem] w-[1.1rem]" />
+           </NavLink>
+            <NavLink href="/explore" isIcon={true}>
+                <Compass className="h-[1.1rem] w-[1.1rem]" />
+            </NavLink>
           <ThemeToggle />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
             <SheetTrigger asChild>
@@ -220,7 +243,7 @@ export default function Header() {
             </SheetTrigger>
             <SheetContent
                 side="right"
-                className="w-[250px] sm:w-[300px] flex flex-col p-0" // Added flex flex-col and removed padding
+                className="w-[250px] sm:w-[300px] flex flex-col p-0"
                 aria-label="Mobile Navigation Menu"
             >
                 {/* Mobile Menu Header */}
@@ -233,27 +256,26 @@ export default function Header() {
                         </span>
                         </Link>
                     </SheetClose>
-                     {/* Optional: Add close button directly here if needed, though SheetClose is outside */}
                 </div>
 
-                {/* Mobile Menu Links - Scrollable */}
+                {/* Mobile Menu Links */}
                 <div className="flex-grow overflow-y-auto p-4">
                     <nav className="flex flex-col space-y-3">
-                        {navItems.map((item) => ( // Use original full list for mobile
+                        {navItems.map((item) => (
                         <SheetClose key={item.href} asChild>
-                            {/* Apply NavLink style in mobile too, adjusting alignment */}
                             <NavLink href={item.href} onClick={() => setIsMobileMenuOpen(false)}>
                                 {item.label}
                             </NavLink>
                         </SheetClose>
                         ))}
-                         {/* Add Ask Mahadev separately at the end for mobile */}
                          <SheetClose asChild>
                              <NavLink href="/ask-mahadev" onClick={() => setIsMobileMenuOpen(false)}>Ask Mahadev</NavLink>
                          </SheetClose>
+                          <SheetClose asChild>
+                             <NavLink href="/explore" onClick={() => setIsMobileMenuOpen(false)}>Explore</NavLink>
+                         </SheetClose>
                     </nav>
                 </div>
-                 {/* Add SheetTitle for accessibility - visually hidden */}
                  <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
             </SheetContent>
           </Sheet>

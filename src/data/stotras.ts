@@ -544,6 +544,105 @@ export const stotrasData: Stotra[] = [
         aiHint: "shiva mental worship manasa puja adi shankaracharya devotion mind",
         image: `https://picsum.photos/seed/manasa-puja/400/225`
     },
+    {
+        id: "shivashtakam",
+        title: "Shivashtakam (Tasmai Namah...)",
+        sanskritTitle: "शिवाष्टकम्",
+        description: "An Ashtakam beginning 'Tasmai Namah Parama Karana Karanaya', praising Shiva as the ultimate cause and describing his various glorious attributes.",
+        composer: "Traditionally attributed to Adi Shankaracharya", // Often attributed, but source varies
+        deity: "Shiva",
+        verses: [
+            {
+                verse: 1,
+                sanskrit: "तस्मै नमः परमकारणकारणाय\nदीप्तोज्ज्वलज्ज्वलितपिङ्गललोचनाय ।\nनागेन्द्रहारकृतकुण्डलभूषणाय\nब्रह्मेन्द्रविष्णुवरदाय नमः शिवाय ॥१॥",
+                meaning: "Salutations to Him, the cause of the ultimate cause, whose tawny eyes blaze brightly. Who wears the king of snakes as a necklace and earrings, the bestower of boons to Brahma, Indra, and Vishnu. Salutations to Shiva!",
+                transliteration: "Tasmai Namah Parama-Kaaranna-Kaarannaaya\nDiipto[a-U]jjvalaj-Jvalita-Pinggala-Locanaaya |\nNaage[a-I]ndra-Haara-Krta-Kunnddala-Bhuussannaaya\nBrahme[a-I]ndra-Vissnnu-Vara-Daaya Namah Shivaaya ||1||"
+            },
+            {
+                verse: 2,
+                sanskrit: "श्रीमत्प्रसन्नशशिपन्नगभूषणाय\nशैलेन्द्रजावदनचुम्बितलोचनाय ।\nकैलासमन्दरमहेन्द्रनिकेतनाय\nलोकत्रयार्तिहरणाय नमः शिवाय ॥२॥",
+                meaning: "Salutations to Him, adorned with the radiant, pleasing moon and serpents, whose eyes are kissed by the face of the Mountain Lord's daughter (Parvati). Whose abode is Kailasa, Mandara, and Mahendra mountains. The remover of the afflictions of the three worlds. Salutations to Shiva!",
+                transliteration: "Shriimat-Prasanna-Shashi-Pannaga-Bhuussannaaya\nShaile[a-I]ndra-Jaa-Vadana-Cumbita-Locanaaya |\nKailaasa-Mandara-Mahendra-Niketanaaya\nLoka-Traya-[A]arti-Harannaaya Namah Shivaaya ||2||"
+            },
+            {
+                verse: 3,
+                sanskrit: "पद्मावदातमणिकुण्डलगोवृषाय\nकृष्णागरुप्रचुरचन्दनचर्चिताय ।\nभस्मानुषक्तविकचोत्पलमल्लिकाय\nनीलाब्जकण्ठसदृशाय नमः शिवाय ॥३॥",
+                meaning: "Salutations to Him, whose bull mount has earrings like pure lotus gems, who is smeared with abundant dark Agaru and Sandalwood paste. Who is adorned with sacred ash, blooming lotuses, and jasmine. Whose neck resembles a blue lotus. Salutations to Shiva!",
+                transliteration: "Padma-Avadaata-Manni-Kunnddala-Go-Vrssaaya\nKrssnnaagaru-Pracura-Candana-Carcitaaya |\nBhasma-Anussakta-Vikaco[a-U]tpala-Mallikaaya\nNiila-Abja-Kannttha-Sadrshaaya Namah Shivaaya ||3||"
+            },
+            {
+                verse: 4,
+                sanskrit: "लम्बत्सपिङ्गलजटामुकुटोत्कटाय\nदंष्ट्राकरालविकटोत्कटभैरवाय ।\nव्याघ्राजिनाम्बरधराय मनोहराय\nत्रैलोक्यनाथनमिताय नमः शिवाय ॥४॥",
+                meaning: "Salutations to Him, magnificent with a crown of dangling, tawny matted locks. The fierce Bhairava with terrifying fangs. Who wears a tiger skin garment, the captivating one, bowed to by the Lord of the three worlds. Salutations to Shiva!",
+                transliteration: "Lambatsa-Pinggala-Jattaa-Mukutto[a-U]tkattaaya\nDamssttraa-Karaala-Vikatto[a-U]tkatta-Bhairavaaya |\nVyaaghra-Ajina-Ambara-Dharaaya Manoharaaya\nTrai-Lokya-Naatha-Namitaaya Namah Shivaaya ||4||"
+            },
+            {
+                verse: 5,
+                sanskrit: "दक्षप्रजापतिमहामखनाशनाय\nक्षिप्रं महात्रिपुरदानवघातनाय ।\nब्रह्मोर्जितोर्ध्वगकरोटिनिकृन्तनाय\nयोगाय योगनमिताय नमः शिवाय ॥५॥",
+                meaning: "Salutations to Him, the destroyer of Daksha Prajapati's great sacrifice. The swift slayer of the mighty Tripura demons. Who cut off the upward-gone, powerful skull of Brahma. To Yoga itself, bowed to by Yoga. Salutations to Shiva!",
+                transliteration: "Dakssa-Prajaapati-Mahaa-Makha-Naashanaaya\nKssipram Mahaa-Tripura-Daanava-Ghaatanaaya |\nBrahmo[a-Uu]rjito[a-Uu]rdhvaga-Karotti-Nikrntanaaya\nYogaaya Yoga-Namitaaya Namah Shivaaya ||5||"
+            },
+            {
+                verse: 6,
+                sanskrit: "संसारसृष्टिघटनापरिवर्तनाय\nरक्षः पिशाचगणसिद्धसमाकुलाय ।\nसिद्धोरगग्रहगणेन्द्रनिषेविताय\nशार्दूलचर्मवसनाय नमः शिवाय ॥६॥",
+                meaning: "Salutations to Him, who brings about changes in the events of worldly creation. Who is surrounded by Rakshasas, Pishachas, Ganas, and Siddhas. Served by Siddhas, Uragas (serpents), Grahas (planets), and Gana-Indras. Who wears a tiger skin garment. Salutations to Shiva!",
+                transliteration: "Samsaara-Srsstti-Ghattanaa-Parivartanaaya\nRakssah Pishaaca-Ganna-Siddha-Samaakulaaya |\nSiddho(a-U)raga-Graha-Ganne[a-I]ndra-Nissevitaaya\nShaarduula-Carma-Vasanaaya Namah Shivaaya ||6||"
+            },
+            {
+                verse: 7,
+                sanskrit: "भस्माङ्गरागकृतरूपमनोहराय\nसौम्यावदातवनमाश्रितमाश्रिताय ।\nगौरीकटाक्षनयनार्धनिरीक्षनाय\nगोक्षीरधारधवलाय नमः शिवाय ॥७॥",
+                meaning: "Salutations to Him, whose form is captivating with the application of sacred ash. Who is gentle, pure, resorted to by those dwelling in forests. Who is half-seen by the side-glance of Gauri's eyes. Who is white like streams of cow's milk. Salutations to Shiva!",
+                transliteration: "Bhasma-Angga-Raaga-Krta-Ruupa-Manoharaaya\nSaumya-Avadaata-Vanam-Aashritam-Aashritaaya |\nGaurii-Kattaakssa-Nayana-Ardha-Niriikssanaaya\nGo-Kssiira-Dhaara-Dhavalaaya Namah Shivaaya ||7||"
+            },
+            {
+                verse: 8,
+                sanskrit: "आदित्यसोमवरुणानिलसेविताय\nयज्ञाग्निहोत्रवरधूमनिकेतनाय ।\nऋक्सामवेदमुनिभिः स्तुतिसंयुताय\nगोपाय गोपनमिताय नमः शिवाय ॥८॥",
+                meaning: "Salutations to Him, served by Aditya (Sun), Soma (Moon), Varuna, and Anila (Wind). Whose abode is the sacred smoke of Yajna and Agnihotra. Praised with hymns by the sages of Rig and Sama Vedas. The protector, bowed to by the Gopas (or protectors). Salutations to Shiva!",
+                transliteration: "Aaditya-Soma-Varunna-Anila-Sevitaaya\nYajnya-Agnihotra-Vara-Dhuuma-Niketanaaya |\nRk-Saama-Veda-Munibhih Stuti-Samyutaaya\nGopaaya Gopa-Namitaaya Namah Shivaaya ||8||"
+            },
+            // Phalashruti
+            {
+                verse: 9,
+                sanskrit: "शिवाष्टकमिदं पुण्यं यः पठेच्छिवसन्निधौ ।\nशिवलोकमवाप्नोति शिवेन सह मोदते ॥९॥",
+                meaning: "Whoever reads this sacred Shivashtakam in the presence of Shiva, attains the abode of Shiva (Shivaloka) and rejoices with Shiva.",
+                transliteration: "Shivaassttakam-Idam Punnyam Yah Patthec-Chiva-Sannidhau |\nShiva-Lokam-Avaapnoti Shivena Saha Modate ||9||"
+            }
+        ],
+        aiHint: "shivashtakam hymn shiva eight verses cause of causes devotion",
+        image: `https://picsum.photos/seed/shivashtakam/400/225`
+    },
+    {
+        id: "shiva-pratah-smaran-stotram",
+        title: "Shiva Pratah Smaran Stotram",
+        sanskritTitle: "शिवप्रातःस्मरणस्तोत्रम्",
+        description: "A morning prayer recalling Lord Shiva's auspicious attributes to start the day with devotion and protection.",
+        // composer: "Unknown/Traditional", // Composer not typically specified
+        deity: "Shiva",
+        verses: [
+            {
+                verse: 1,
+                sanskrit: "प्रातः स्मरामि भवभीतिहरं सुरेशं\nगङ्गाधरं वृषभवाहनमम्बिकेशम् ।\nखट्वाङ्गशूलवरदाभयहस्तमीशं\nसंसाररोगहरमौषधमद्वितीयम् ॥१॥",
+                meaning: "In the morning, I remember the Lord of Gods (Suresh), the remover of the fear of worldly existence (Bhava-Bhiti), the bearer of Ganga, whose mount is the bull, the Lord of Ambika (Parvati). I remember the Lord who holds a Khatvanga (club with skull), trident, and bestows boons and fearlessness with his hands, the unique medicine that cures the disease of Samsara.",
+                transliteration: "Praatah Smaraami Bhava-Bhiiti-Haram Sure[a-Ii]sham\nGanggaa-Dharam Vrssabha-Vaahanam-Ambike[a-Ii]sham |\nKhattvaangga-Shuula-Varada-Abhaya-Hastam-Iisham\nSamsaara-Roga-Haram-Aussadham-Advitiiyam ||1||"
+            },
+            {
+                verse: 2,
+                sanskrit: "प्रातर्नमामि गिरिशं गिरिजार्धदेहं\nसर्गस्थितिप्रलयकारणमादिदेवम् ।\nविश्वेश्वरं विजितविश्वमनोभिरामं\nसंसाररोगहरमौषधमद्वितीयम् ॥२॥",
+                meaning: "In the morning, I bow to the Lord of the Mountains (Girisha), whose half-body is Girija (Parvati), the primeval God who is the cause of creation, sustenance, and dissolution. I bow to the Lord of the Universe (Vishveshvara), who has conquered the universe, who is pleasing to the mind, the unique medicine that cures the disease of Samsara.",
+                transliteration: "Praatar-Namaami Girisham Girija-Ardha-Deham\nSarga-Sthiti-Pralaya-Kaarannam-Aadi-Devam |\nVishva-Iishvaram Vijita-Vishva-Manobhiraamam\nSamsaara-Roga-Haram-Aussadham-Advitiiyam ||2||"
+            },
+            {
+                verse: 3,
+                sanskrit: "प्रातर्भजामि शिवमेकमनन्तमाद्यं\nवेदान्तवेद्यमनघं पुरुषं महान्तम् ।\nनामादिभेदरहितं षड्भावशून्यं\nसंसाररोगहरमौषधमद्वितीयम् ॥३॥",
+                meaning: "In the morning, I worship Shiva, the One, the endless, the primal being, knowable through Vedanta, the sinless, the great Purusha. Who is devoid of differences like name etc., free from the six states of change (birth, existence, growth, transformation, decay, death), the unique medicine that cures the disease of Samsara.",
+                transliteration: "Praatar-Bhajaami Shivam-Ekam-Anantam-Aadyam\nVedaanta-Vedyam-Anagham Purussam Mahaantam |\nNaama-Aadi-Bheda-Rahitam Ssadd-Bhaava-Shuunyam\nSamsaara-Roga-Haram-Aussadham-Advitiiyam ||3||"
+            }
+            // Optional Phalashruti if available
+        ],
+        aiHint: "shiva morning prayer pratah smaran devotion protection",
+        image: `https://picsum.photos/seed/pratah-smaran/400/225` // Placeholder image
+    },
+
 ];
 
 
