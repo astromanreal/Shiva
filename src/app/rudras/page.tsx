@@ -31,15 +31,15 @@ export default function RudrasPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8"> {/* Increased gap */}
         {rudras.map((rudra) => (
           <Card key={rudra.id} className="flex flex-col h-full hover:shadow-xl transition-shadow duration-300 border border-border/70 hover:border-primary/50 bg-card/90 backdrop-blur-sm overflow-hidden">
-             {rudra.aiHint && ( // Placeholder Image
+             {(rudra.image || rudra.aiHint) && ( // Check for specific image first, then aiHint for placeholder
                <div className="aspect-video relative overflow-hidden border-b border-border/50">
                  <Image
-                   src={`https://picsum.photos/seed/${rudra.id}/400/225`}
+                   src={rudra.image ? rudra.image : `https://picsum.photos/seed/${rudra.id}/400/225`}
                    alt={rudra.name}
                    width={400}
                    height={225}
                    className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                   data-ai-hint={rudra.aiHint}
+                   data-ai-hint={!rudra.image ? rudra.aiHint : undefined} // Only provide aiHint if using picsum
                  />
                  {/* Optional overlay */}
                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>

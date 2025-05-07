@@ -36,13 +36,13 @@ export default function JyotirlingaDetailPage({ params }: JyotirlingaPageProps) 
       {/* Hero Image */}
       <div className="mb-6 overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9 border border-border/50">
         <Image
-          src={`https://picsum.photos/seed/${linga.id}-detail/800/450`} // Placeholder detail image
+          src={linga.image || `https://picsum.photos/seed/${linga.id}-detail/800/450`} 
           alt={linga.name}
           width={800}
           height={450}
           className="object-cover w-full h-full"
-          data-ai-hint={linga.aiHint + ' detail view temple architecture'} // More specific hint
-          priority // Prioritize loading hero image
+          data-ai-hint={linga.aiHint + ' detail view temple architecture'} 
+          priority 
         />
       </div>
 
@@ -141,3 +141,4 @@ export default function JyotirlingaDetailPage({ params }: JyotirlingaPageProps) 
     </div>
   );
 }
+

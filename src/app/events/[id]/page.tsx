@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { getEventById, Event, getAllEvents } from '@/data/events';
+import { getEventById, Event, getAllEvents } from '@/data/events'; // Ensure Event type is imported
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { BookOpenText, CheckCircle, Users, Info, CalendarIcon } from 'lucide-react'; // Relevant icons
@@ -26,16 +26,15 @@ export default function EventPage({ params }: EventPageProps) {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
-       {event.aiHint && ( // Use placeholder image if hint exists
+       {(event.image || event.aiHint) && ( // Check for actual image or aiHint for placeholder
         <div className="mb-6 overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9">
           <Image
-            // Use picsum photos with seed based on event id for consistency
-            src={`https://picsum.photos/seed/${event.id}/800/450`}
+            src={typeof event.image === 'string' ? event.image : `https://picsum.photos/seed/${event.id}/800/450`}
             alt={event.title}
             width={800}
             height={450}
             className="object-cover w-full h-full"
-            data-ai-hint={event.aiHint} // Keep the hint
+            data-ai-hint={event.aiHint || `${event.title.toLowerCase()} detail view`} // Use title as fallback hint
             priority // Prioritize loading hero image
           />
         </div>

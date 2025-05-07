@@ -37,7 +37,8 @@ export const eventsData: Event[] = [
             { label: "Shiva's Action", value: "Consumed Halahala Poison" },
             { label: "Location", value: "Ocean of Milk (Kshira Sagara)" },
         ],
-        aiHint: "churning ocean devas asuras shiva poison neelakantha",
+        image: "https://drive.google.com/uc?export=view&id=1Xzhu2JAhYZrvsySeNR5611rkoQpXLPCz",
+        aiHint: "churning ocean devas asuras shiva poison neelakantha cosmic event",
     },
     {
         id: "daksha-yagna",
@@ -58,7 +59,8 @@ export const eventsData: Event[] = [
             { label: "Shiva's Response", value: "Destruction of Yagna via Veerabhadra" },
             { label: "Location", value: "Daksha's Sacrificial Arena" },
         ],
-        aiHint: "sacrifice daksha sati shiva veerabhadra destruction",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Daksha_yagna.jpg/500px-Daksha_yagna.jpg",
+        aiHint: "sacrifice daksha sati shiva veerabhadra destruction yagna fire",
     },
     {
         id: "tripurasura-samhara",
@@ -79,7 +81,8 @@ export const eventsData: Event[] = [
             { label: "Condition for Destruction", value: "Cities aligned perfectly" },
             { label: "Shiva's Form", value: "Tripurantaka" },
         ],
-        aiHint: "shiva destroying three cities flying chariot bow arrow asuras tripurantaka",
+        image: "https://unitywithinfinity.com/wp-content/uploads/2024/02/Tripurasura-asuras-of-the-three-cities.webp",
+        aiHint: "shiva destroying three cities flying chariot bow arrow asuras tripurantaka cosmic battle",
     },
     {
         id: "ganga-avatarana",
@@ -100,7 +103,8 @@ export const eventsData: Event[] = [
             { label: "Shiva's Action", value: "Caught Ganga in his matted locks" },
             { label: "Outcome", value: "River Ganga flows on Earth" },
         ],
-        aiHint: "shiva catching river ganga head matted locks bhagiratha himalayas",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Descent_of_the_Ganges_01.jpg/500px-Descent_of_the_Ganges_01.jpg",
+        aiHint: "shiva catching river ganga head matted locks bhagiratha himalayas sacred river",
     },
      {
         id: "markandeya-vijaya",
@@ -121,7 +125,8 @@ export const eventsData: Event[] = [
             { label: "Shiva's Action", value: "Emerged from Lingam, defeated Yama" },
             { label: "Boon Granted", value: "Immortality (Chiranjivi)" },
         ],
-        aiHint: "shiva emerging lingam saving boy markandeya yama death",
+        image: "https://bambinos.live/images/blog/1745588655m.jpg",
+        aiHint: "shiva emerging lingam saving boy markandeya yama death divine protection",
     },
     // Add more events as needed
 ];

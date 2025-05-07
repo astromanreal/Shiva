@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { getAllEvents } from '@/data/events';
+import { getAllEvents, Event } from '@/data/events'; // Ensure Event type is imported
 import { ArrowRight, BookOpen, Users, CalendarIcon } from 'lucide-react'; // Added CalendarIcon
 import { Badge } from '@/components/ui/badge';
 
@@ -23,15 +23,15 @@ export default function EventsPage() {
         {events.map((event) => (
           <Link key={event.id} href={`/events/${event.id}`} className="block group">
             <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:border-primary/50 group-hover:scale-[1.02] overflow-hidden">
-               {event.aiHint && ( // Placeholder Image
+               {(event.image || event.aiHint) && ( // Check for actual image or aiHint for placeholder
                 <div className="aspect-video relative overflow-hidden">
                   <Image
-                    src={`https://picsum.photos/seed/${event.id}/400/225`}
+                    src={typeof event.image === 'string' ? event.image : `https://picsum.photos/seed/${event.id}/400/225`}
                     alt={event.title}
                     width={400}
                     height={225}
                     className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                    data-ai-hint={event.aiHint}
+                    data-ai-hint={event.aiHint || event.title.toLowerCase()} // Use title as fallback hint
                   />
                 </div>
               )}

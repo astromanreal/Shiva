@@ -10,7 +10,7 @@ export default function MaaKaliPage() {
       <section className="text-center space-y-3 border-b pb-6 border-border/50">
          <div className="mb-8 overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9 max-w-2xl mx-auto">
             <Image
-                src="https://picsum.photos/seed/maa-kali-fierce/800/450" // Placeholder image
+                src="https://i.pinimg.com/736x/6c/4c/ab/6c4cabe550e188f47780e508ce6fa35c.jpg" // Updated image link
                 alt="Maa Kali Fierce Representation"
                 width={800}
                 height={450}
@@ -117,3 +117,4 @@ export default function MaaKaliPage() {
     </div>
   );
 }
+

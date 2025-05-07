@@ -39,7 +39,7 @@ export default function MahadevRupDetailPage({ params }: MahadevRupPageProps) {
     <div className="max-w-4xl mx-auto space-y-8">
       <div className="mb-6 overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9">
         <Image
-          src={`https://picsum.photos/seed/${form.id}/800/450`} // Placeholder image
+          src={form.image || `https://picsum.photos/seed/${form.id}/800/450`} // Use form.image if available, else fallback
           alt={form.name}
           width={800}
           height={450}
@@ -116,3 +116,4 @@ export default function MahadevRupDetailPage({ params }: MahadevRupPageProps) {
     </div>
   );
 }
+

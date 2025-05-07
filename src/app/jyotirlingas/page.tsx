@@ -31,7 +31,7 @@ export default function JyotirlingasPage() {
             <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:border-primary/50 group-hover:scale-[1.03] overflow-hidden bg-card/90 backdrop-blur-sm">
               <div className="aspect-video relative overflow-hidden">
                 <Image
-                  src={`https://picsum.photos/seed/${linga.id}/400/225`} // Placeholder image
+                  src={linga.image || `https://picsum.photos/seed/${linga.id}/400/225`} 
                   alt={linga.name}
                   width={400}
                   height={225}
@@ -73,3 +73,4 @@ export default function JyotirlingasPage() {
     </div>
   );
 }
+

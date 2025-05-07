@@ -1,3 +1,4 @@
+
 export interface MahadevRup {
   id: string; // Unique identifier
   name: string;
@@ -8,6 +9,7 @@ export interface MahadevRup {
   relatedConcepts: string[]; // Connections to practices, philosophies etc.
   mantra?: string; // Optional associated mantra
   aiHint: string; // Hint for image generation
+  image?: string; // Optional image URL for the form
 }
 
 export const mahadevRupData: MahadevRup[] = [
@@ -26,6 +28,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "Represents the ultimate, unmanifest source and destination of the cosmos, beyond the manifested forms like Sadashiva or Maheshwara. It is the goal of liberation in these schools.",
     relatedConcepts: ["Shaiva Siddhanta", "Kashmir Shaivism", "Nirguna Brahman", "Transcendence", "Absolute Reality"],
     aiHint: "parashiva supreme shiva formless absolute transcendental unmanifest",
+    image: "https://drive.google.com/uc?export=view&id=1M8XwF8bSq9YYsvcfiGBKgldqExbLQI6h",
   },
   {
     id: "sadasiva",
@@ -41,6 +44,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "The highest active form of Shiva responsible for the cosmic functions, especially bestowing grace (Anugraha) and liberation. Often represented by the Mukhalingam.",
     relatedConcepts: ["Shaiva Siddhanta", "Panchakritya", "Panchamukha", "Anugraha (Grace)", "Mukhalingam", "Agamas"],
     aiHint: "sadasiva five faces ten hands shiva supreme manifestation grace",
+    image: "https://drive.google.com/uc?export=view&id=1do-bvQPcvPYFx7dFOryNY-GZtDYbHoyR",
   },
   {
     id: "panchabrahma",
@@ -57,6 +61,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "Represents the totality of Shiva's manifested power and cosmic functions operating through these five fundamental aspects. They embody the entire creation.",
     relatedConcepts: ["Sadasiva", "Panchakritya", "Five Elements", "Cosmic Functions", "Manifestation"],
     aiHint: "shiva five faces panchabrahma sadasiva elements cosmic functions creation",
+    image: "https://drive.google.com/uc?export=view&id=1MO7ZFks121wT0ILemvy9wcNEwWgoQj19",
   },
   {
     id: "nataraja",
@@ -76,6 +81,7 @@ export const mahadevRupData: MahadevRup[] = [
     relatedConcepts: ["Tandava Dance", "Cosmic Cycles (Yugas)", "Shaiva Siddhanta", "Art and Sculpture"],
     mantra: "ॐ नटराजाय नमः (Om Natarajaya Namah)",
     aiHint: "shiva cosmic dancer nataraja fire circle drum tandava",
+    image: "https://i.pinimg.com/736x/27/30/c0/2730c0096d134d26f368a8c4454d2e20.jpg",
   },
   {
     id: "ardhanarishvara",
@@ -91,6 +97,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "Represents the inseparable union of Shiva (Purusha - consciousness) and Shakti (Prakriti - energy/matter). It signifies that the ultimate reality is a balance and synthesis of opposites, beyond duality.",
     relatedConcepts: ["Shiva-Shakti", "Purusha-Prakriti", "Non-duality (Advaita)", "Gender Synthesis"],
     aiHint: "shiva parvati combined half male half female ardhanarishvara",
+    image: "https://i.pinimg.com/736x/83/60/d3/8360d3496688a6fffeb1c50713f548fc.jpg",
   },
   {
     id: "bhairava",
@@ -107,6 +114,7 @@ export const mahadevRupData: MahadevRup[] = [
     relatedConcepts: ["Kala Bhairava (Time)", "Annihilation", "Protection", "Tantric Practices", "Shakti Peethas"],
     mantra: "ॐ कालभैरवाय नमः (Om Kalabhairavaya Namah)",
     aiHint: "fierce shiva bhairava dog skull trident kashi guardian",
+    image: "https://i.pinimg.com/736x/ab/b6/09/abb6098efd6fd1eaa431bebca3f45cc0.jpg",
   },
   {
     id: "aghori",
@@ -122,6 +130,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "Aghoris represent an extreme path of non-duality, seeking direct realization by confronting the most feared aspects of existence. They embody Shiva's aspect that lies beyond conventional purity and impurity.",
     relatedConcepts: ["Asceticism", "Tantra", "Non-duality (Advaita)", "Cremation Grounds", "Transcendence"],
     aiHint: "aghori ascetic shiva cremation ground skull intense unconventional",
+    image: "https://i.pinimg.com/736x/91/2f/7d/912f7d7a3cb8eeb6842b55c64c237856.jpg",
   },
   {
     id: "adiyogi",
@@ -137,6 +146,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "Recognizes Shiva as the ultimate source of spiritual knowledge and the path of Yoga. Adiyogi represents the potential within every human being to attain liberation through yogic practices.",
     relatedConcepts: ["Yoga", "Meditation", "Guru", "Saptarishis", "Self-Realization", "Kundalini"],
     aiHint: "shiva meditating yogi first guru adiyogi mountains knowledge",
+    image: "https://i.pinimg.com/736x/a9/f4/99/a9f499fec025f95e21653b655694ba43.jpg",
   },
    {
     id: "dakshinamurthy",
@@ -155,6 +165,7 @@ export const mahadevRupData: MahadevRup[] = [
     relatedConcepts: ["Guru", "Jnana (Knowledge)", "Silence", "Advaita Vedanta", "Yoga", "Music"],
     mantra: "ॐ दक्षिणामूर्तये नमः (Om Dakshinamurthaye Namah)",
     aiHint: "shiva teacher guru silent teaching sages south facing banyan tree",
+    image: "https://i.pinimg.com/736x/8a/26/2e/8a262eb6a09ce616f87b650ab00d6995.jpg",
   },
   {
     id: "neelakantha",
@@ -169,6 +180,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "Demonstrates Shiva's immense compassion, sacrifice, and power to neutralize negativity for the sake of creation. It shows his ability to absorb and transmute destructive forces.",
     relatedConcepts: ["Samudra Manthan", "Halahala Poison", "Compassion", "Sacrifice", "Transformation"],
     aiHint: "shiva blue throat poison samudra manthan compassion",
+    image: "https://i.pinimg.com/736x/39/53/0c/39530cb8ac9325a340253708fb203372.jpg",
   },
    {
     id: "lingam",
@@ -184,6 +196,7 @@ export const mahadevRupData: MahadevRup[] = [
     significance: "The Lingam is the most prevalent symbol for worshipping Shiva, representing the ultimate, formless reality from which everything emerges and into which everything dissolves. It signifies creative power and transcendence.",
     relatedConcepts: ["Formless (Nirguna Brahman)", "Manifest (Saguna Brahman)", "Creation", "Cosmic Pillar", "Shiva-Shakti Union"],
     aiHint: "shiva lingam abstract pillar yoni worship symbol formless",
+    image: "https://i.pinimg.com/736x/ac/00/3e/ac003e07cb1f1f574967af5b89bc083e.jpg",
   },
 ];
 
