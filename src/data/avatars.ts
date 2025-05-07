@@ -43,6 +43,7 @@ export const avatarsData: Avatar[] = [
     writtenTexts: ["Skanda Purana", "Prashna Upanishad"],
     importance: "Worshipped for relief from Saturn-related troubles and revered for profound wisdom.",
     mantras: ["ॐ नमः पिप्पलादाय नमः"],
+    image: "https://i.pinimg.com/736x/cf/8a/2b/cf8a2b4cb05ba61b19e5ae80bd4a6e8b.jpg",
     aiHint: "sage peepal tree saturn prashna upanishad"
   },
   {
@@ -62,6 +63,7 @@ export const avatarsData: Avatar[] = [
     writtenTexts: ["Shiva Purana", "Linga Purana", "Agamas"],
     importance: "Represents steadfast devotion, righteousness, and the joy of serving the divine. Prayers to Shiva are often directed through Nandi first.",
     mantras: ["ॐ नन्दिकेश्वराय नमः"],
+    image: "https://i.pinimg.com/736x/e9/14/b6/e914b67bfd30839ae67c1c5f43a8778b.jpg",
     aiHint: "divine bull nandi shiva mount kailash gatekeeper devotion"
   },
   {
@@ -87,6 +89,7 @@ export const avatarsData: Avatar[] = [
     writtenTexts: ["Shiva Purana", "Skanda Purana", "Linga Purana", "Vayu Purana", "Mahabharata"],
     importance: "Symbol of divine rage against adharma (unrighteousness) and disrespect towards devotion. Represents cosmic justice and Shiva's protective fury.",
     mantras: ["ॐ वीरभद्राय नमः"],
+    image: "https://i.pinimg.com/736x/b5/3e/c0/b53ec0f6d39fbd3a12b1b2c4437b2bcf.jpg",
     aiHint: "fierce warrior shiva wrath daksha yagna sati ganas bhadrakali"
   },
   {
@@ -106,6 +109,7 @@ export const avatarsData: Avatar[] = [
     writtenTexts: ["Shiva Purana", "Kurma Purana", "Tantric texts"],
     importance: "Represents the fierce aspect that destroys illusion, ego, and protects devotees. Kala Bhairava is the Lord of Time and guardian of Kashi.",
     mantras: ["ॐ कालभैरवाय नमः", "ॐ ह्रीं बटुकाय आपदुद्धारणाय कुरु कुरु बटुकाय ह्रीं ॐ"],
+    image: "https://i.pinimg.com/736x/ab/b6/09/abb6098efd6fd1eaa431bebca3f45cc0.jpg",
     aiHint: "fierce shiva bhairava dog skull kashi time guardian tantra"
   },
     {
@@ -124,6 +128,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Mahabharata"],
     importance: "Represents the complexities of dharma, the consequences of rage and unethical actions, and the burden of immortality under a curse.",
+    image: "https://i.pinimg.com/736x/14/08/a2/1408a2a717591c69c67500920dab093b.jpg",
     aiHint: "warrior mahabharata dronacharya son curse immortal chiranjivi"
   },
    {
@@ -142,6 +147,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Sharabha Upanishad", "Shiva Purana", "Linga Purana"],
     importance: "Symbolizes Shiva's supreme power, capable of controlling even the fiercest divine manifestations and restoring equilibrium.",
+    image: "https://i.pinimg.com/736x/30/4a/7a/304a7ab215d05e9f99f590fbea041963.jpg",
     aiHint: "lion bird hybrid shiva narasimha pacify fierce supreme power"
   },
   {
@@ -160,6 +166,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana (Vāyavīya Saṃhitā)"],
     importance: "Highlights the possibility of attaining liberation and divine grace while living a responsible householder life.",
+    image: "https://i.pinimg.com/736x/0f/3f/f5/0f3ff53b6260cbedd9060733c3b962d8.jpg",
     aiHint: "householder shiva brahmin boy agni devotion family life"
   },
   {
@@ -182,6 +189,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Various Puranas (Bhagavata, Vishnu, etc.)", "Mahabharata", "Ramayana"],
     importance: "Represents the uncontrollable aspect of divine power, the importance of respecting ascetics, and serves as a catalyst in divine play (lila).",
+    image: "https://i.pinimg.com/736x/09/49/6a/09496a649e918f601a427e7b9c535bed.jpg",
     aiHint: "angry sage curse ascetic power rishi tapasya test"
   },
   {
@@ -201,6 +209,7 @@ export const avatarsData: Avatar[] = [
     writtenTexts: ["Ramayana (especially Sundara Kanda)", "Mahabharata", "Puranas", "Hanuman Chalisa"],
     importance: "Ultimate symbol of devotion, loyalty, courage, strength, humility, and selfless service (Seva). Widely worshipped across India.",
     mantras: ["ॐ हनुमते नमः", "ॐ आञ्जनेयाय नमः", "मनोजवं मारुततुल्यवेगं..."],
+    image: "https://i.pinimg.com/736x/6f/c2/fc/6fc2fcdf11b0e560166ad1b2b2e6ce83.jpg",
     aiHint: "monkey god rama devotion strength bhakti seva ramayana"
   },
   {
@@ -219,6 +228,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Bhagavata Purana", "Vishnu Purana", "Jain Agamas"],
     importance: "Significant figure bridging Hinduism and Jainism, representing the ascetic path (Shramana tradition) and the ideal of detachment.",
+    image: "https://i.pinimg.com/736x/36/81/9c/36819c861b6b38a884b8518d11293134.jpg",
     aiHint: "ascetic king jain tirthankara renunciation non-violence ahimsa"
   },
   {
@@ -237,6 +247,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana"],
     importance: "Emphasizes the supreme virtue of hospitality towards guests (Atithi Devo Bhava) and selfless devotion, regardless of one's status.",
+    image: "https://i.pinimg.com/736x/ef/84/5d/ef845dd4732eafccb6d6e8706ee167c7.jpg",
     aiHint: "ascetic guest bhil couple hospitality test devotion selfless"
   },
   {
@@ -255,6 +266,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana"],
     importance: "Reinforces the role and efficacy of Karma Kanda within the framework of Sanatana Dharma.",
+    image: "https://i.pinimg.com/736x/82/1c/53/821c530f83f15d0098f48b2c75918afd.jpg",
     aiHint: "yagna ritual vedic importance karma kanda cosmic order"
   },
   {
@@ -273,6 +285,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana", "Kurma Purana", "Skanda Purana"],
     importance: "Represents ultimate detachment, the consequences of actions (even divine ones), the path of renunciation, and the sacredness of Kashi.",
+    image: "https://i.pinimg.com/736x/5a/06/c5/5a06c5ed072daf8cff71533749d88c21.jpg",
     aiHint: "mendicant beggar skull bowl kashi detachment atonement bhairava"
   },
   {
@@ -291,6 +304,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana"],
     importance: "Highlights Shiva's role as the ultimate authority ('Ishvara') and refuge for the celestial beings, the protector of cosmic dharma.",
+    image: "https://i.pinimg.com/736x/35/27/62/3527622322a5a29bfe325824ec7a4283.jpg",
     aiHint: "lord of gods devas indra protection authority cosmic balance"
   },
   {
@@ -309,6 +323,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Mahabharata (Kiratarjuniya Parva)"],
     importance: "Illustrates that divinity tests devotees rigorously and can appear in any form. Emphasizes valor, perseverance, and divine grace.",
+    image: "https://i.pinimg.com/736x/8f/60/32/8f6032d412aa3753e6b5cfc2abfd9633.jpg",
     aiHint: "tribal hunter arjuna pashupatastra weapon test mahabharata duel"
   },
   {
@@ -327,6 +342,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana", "Natya Shastra references"],
     importance: "Related to Nataraja, symbolizing the dynamic nature of the universe, the cycles of creation and destruction, illusion, and grace, all expressed through dance.",
+    image: "https://i.pinimg.com/736x/ca/3c/f0/ca3cf094d648d9d79b297587d78829c1.jpg",
     aiHint: "celestial dancer nataraja cosmic dance rhythm actor tandava"
   },
   {
@@ -345,6 +361,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana", "Kumarasambhava (by Kalidasa)"],
     importance: "Highlights the importance of steadfast devotion and determination in spiritual pursuits, and Shiva's playful testing of his devotees.",
+    image: "https://i.pinimg.com/736x/8f/60/32/8f6032d412aa3753e6b5cfc2abfd9633.jpg", // Same as Kirata as per user's list
     aiHint: "ascetic student shiva testing parvati penance devotion disguise"
   },
   {
@@ -367,6 +384,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Puranas", "Mahabharata (Yaksha Prashna context potentially related)"],
     importance: "Shows Shiva's lordship over various classes of beings, including nature spirits, and his connection to wealth (as Kubera's friend) and hidden realms.",
+    image: "https://i.pinimg.com/736x/dd/77/1d/dd771dff333e2a6129e8ea4fd4371bc4.jpg",
     aiHint: "lord of yakshas kubera wealth spirits nature test humility"
   },
    {
@@ -385,14 +403,33 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Shiva Purana", "Avadhuta Gita context"],
     importance: "Symbolizes the liberated soul who operates beyond conventional rules, completely free from ego and duality. Represents the ultimate state of spiritual freedom.",
+    image: "https://i.pinimg.com/736x/39/72/bb/3972bb8d1e1ab4e0b2bb24dcc36bb2d0.jpg",
     aiHint: "ascetic detached unconventional liberated soul freedom non-duality indra test"
   },
-  // Adding new avatars from user list:
+  {
+    id: "ardhanarishvara",
+    name: "Ardhanarishvara",
+    sanskritName: "अर्धनारीश्वर",
+    // rank: TBD (Already present in Mahadev Rup, handled there)
+    description: "A composite form of Shiva and Parvati, half male and half female.",
+    purpose: "To symbolize the synthesis of masculine and feminine energies, the inseparability of Shiva and Shakti.",
+    achievements: ["Ultimate symbol of non-duality", "Represents balance of cosmic forces"],
+    stories: [
+       {
+        title: "The Lord Who is Half Woman",
+        content: "This iconic form shows Shiva and Parvati merged into one body, representing the essential unity of consciousness (Shiva) and energy (Shakti), and that the ultimate reality transcends gender."
+       }
+    ],
+    writtenTexts: ["Puranas", "Tantras", "Iconographic texts"],
+    importance: "A profound representation of cosmic unity, non-duality, and the interdependence of masculine and feminine principles.",
+    image: "https://i.pinimg.com/736x/83/60/d3/8360d3496688a6fffeb1c50713f548fc.jpg",
+    aiHint: "shiva parvati combined half male half female ardhanarishvara unity shakti"
+  },
    {
     id: "mahesh",
     name: "Mahesh",
     sanskritName: "महेश",
-    // rank: TBD - Rank can be complex to assign definitively
+    // rank: TBD
     description: "A name signifying Shiva as the 'Great Lord', often used interchangeably with Maheshwara.",
     purpose: "To represent Shiva's supreme lordship and authority over the cosmos.",
     achievements: ["Embodiment of supreme divine power and control"],
@@ -404,6 +441,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Puranas", "Upanishads", "General Hindu Scriptures"],
     importance: "Highlights Shiva's status as the Supreme God.",
+    image: "https://i.pinimg.com/736x/30/38/1a/30381a00a6255ba26cc90ff8fd9a5496.jpg",
     aiHint: "shiva great lord mahesh maheshwara supreme authority cosmos"
    },
    {
@@ -422,6 +460,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Puranas"],
     importance: "Reinforces Shiva's connection to Dharma and Nandi.",
+    image: "https://i.pinimg.com/736x/ed/4f/c2/ed4fc25e00db68a5256db097ed9bb5c5.jpg",
     aiHint: "shiva bull lord vrishabha nandi dharma strength"
    },
     {
@@ -440,6 +479,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Possibly local Puranic narratives or specific Samhitas"],
     importance: "Shows Shiva's presence and relevance across all sections of society and aspects of life, including economic activity.",
+    image: "https://i.pinimg.com/736x/2e/34/2f/2e342fa3ffce48a0f7c9205ad7555d51.jpg",
     aiHint: "shiva lord merchant vaishya trade commerce dharma wealth"
    },
    {
@@ -458,6 +498,7 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Possibly local Puranic narratives or specific Samhitas"],
     importance: "Emphasizes Shiva's connection to Vedic learning, rituals, and the Brahminical order.",
+    image: "https://i.pinimg.com/736x/12/e4/92/12e492c0c441f5dd36a0c63d690446d3.jpg",
     aiHint: "shiva lord brahmin dwija twice-born vedic knowledge ritual dharma"
    },
    {
@@ -476,27 +517,9 @@ export const avatarsData: Avatar[] = [
     ],
     writtenTexts: ["Likely specific, less common Puranic episodes"],
     importance: "Reinforces that divinity can manifest in simple, virtuous forms.",
+    image: "https://i.pinimg.com/736x/5e/de/e1/5edee1da0ce7019c04018fb4f6813cae.jpg",
     aiHint: "shiva virtuous brahmin sadhu dwija ascetic piety"
    },
-   {
-    id: "ardhanarishvara", // Duplicate but from user's list, ensuring presence
-    name: "Ardhanarishvara",
-    sanskritName: "अर्धनारीश्वर",
-    // rank: TBD
-    description: "A composite form of Shiva and Parvati, half male and half female.",
-    purpose: "To symbolize the synthesis of masculine and feminine energies, the inseparability of Shiva and Shakti.",
-    achievements: ["Ultimate symbol of non-duality", "Represents balance of cosmic forces"],
-    stories: [
-       {
-        title: "The Lord Who is Half Woman",
-        content: "This iconic form shows Shiva and Parvati merged into one body, representing the essential unity of consciousness (Shiva) and energy (Shakti), and that the ultimate reality transcends gender."
-       }
-    ],
-    writtenTexts: ["Puranas", "Tantras", "Iconographic texts"],
-    importance: "A profound representation of cosmic unity, non-duality, and the interdependence of masculine and feminine principles.",
-    aiHint: "shiva parvati combined half male half female ardhanarishvara unity shakti"
-  },
-
 ];
 
 // Function to get all avatars

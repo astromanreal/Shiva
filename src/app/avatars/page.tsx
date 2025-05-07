@@ -23,16 +23,16 @@ export default function AvatarsPage() {
           <Link key={avatar.id} href={`/avatars/${avatar.id}`} className="block group">
             <Card className="h-full flex flex-col transition-all duration-300 ease-in-out group-hover:shadow-lg group-hover:border-primary/50 group-hover:scale-[1.03]">
               <CardHeader>
-                {avatar.aiHint && ( // Use placeholder image if hint exists
+                {(avatar.image || avatar.aiHint) && ( // Use avatar.image or placeholder image if hint exists
                   <div className="mb-4 overflow-hidden rounded-md aspect-video relative">
                     <Image
-                      // Use picsum photos with seed based on avatar id for consistency
-                      src={`https://picsum.photos/seed/${avatar.id}/400/225`}
+                      src={avatar.image || `https://picsum.photos/seed/${avatar.id}/400/225`}
                       alt={avatar.name}
                       width={400}
                       height={225}
                       className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                      data-ai-hint={avatar.aiHint} // Keep the hint for potential future use
+                      data-ai-hint={!avatar.image ? avatar.aiHint : undefined} // Only provide aiHint if using picsum
+                      priority={typeof avatar.image === 'string'} // Prioritize if image is a string (URL)
                     />
                   </div>
                 )}

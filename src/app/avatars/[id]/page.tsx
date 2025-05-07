@@ -39,17 +39,16 @@ export default function AvatarPage({ params }: AvatarPageProps) {
 
   return (
     <div className="max-w-4xl mx-auto space-y-8">
-       {avatar.aiHint && ( // Use placeholder image if hint exists
+       {(avatar.image || avatar.aiHint) && ( // Use avatar.image or placeholder image if hint exists
         <div className="mb-6 overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9">
           <Image
-            // Use picsum photos with seed based on avatar id for consistency
-            src={`https://picsum.photos/seed/${avatar.id}/800/450`}
+            src={avatar.image || `https://picsum.photos/seed/${avatar.id}/800/450`}
             alt={avatar.name}
             width={800}
             height={450}
             className="object-cover w-full h-full"
-            data-ai-hint={avatar.aiHint} // Keep the hint
-            priority // Prioritize loading hero image
+            data-ai-hint={!avatar.image ? avatar.aiHint : undefined} // Only provide aiHint if using picsum
+            priority={typeof avatar.image === 'string'} // Prioritize loading hero image if it's a URL
           />
         </div>
       )}
