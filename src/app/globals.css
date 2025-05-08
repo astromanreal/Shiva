@@ -2,43 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: var(--font-geist-sans), sans-serif; /* Use CSS variable for base font */
-}
-
 @layer base {
+  /* Base font size variable, to be overridden by font size preference classes */
   :root {
-    --background: 210 40% 98%; /* Light mode background (kept for toggle) */
-    --foreground: 224 71% 4%; /* Light mode foreground */
-    --card: 210 40% 98%; /* Light mode card */
-    --card-foreground: 224 71% 4%; /* Light mode card foreground */
-    --popover: 210 40% 98%; /* Light mode popover */
-    --popover-foreground: 224 71% 4%; /* Light mode popover foreground */
-    --primary: 30 90% 55%; /* Saffron orange accent */
-    --primary-foreground: 0 0% 0%; /* Black for primary button text */
-    --secondary: 215 28% 93%; /* Light mode secondary */
-    --secondary-foreground: 224 71% 4%; /* Light mode secondary foreground */
-    --muted: 215 28% 93%; /* Light mode muted */
-    --muted-foreground: 215 20% 45%; /* Light mode muted foreground */
-    --accent: 215 28% 93%; /* Light mode accent */
-    --accent-foreground: 224 71% 4%; /* Light mode accent foreground */
-    --destructive: 0 84% 60%; /* Light mode destructive */
-    --destructive-foreground: 210 40% 98%; /* Light mode destructive foreground */
-    --border: 215 20% 87%; /* Light mode border */
-    --input: 215 20% 87%; /* Light mode input */
-    --ring: 30 90% 55%; /* Saffron orange for ring */
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
-    /* Font variables added by next/font */
-    /* --font-geist-sans: ...; */
-    /* --font-noto-sans-devanagari: ...; */
-  }
-
-  .dark {
+    --font-base-size: 1rem; /* Default to 16px */
+    /* Default Theme: Kailash Night (Dark) */
+    /* This is the fallback if no theme class is applied, or can be explicitly set */
     --background: 224 71% 4%; /* Deep Blue/Black Background */
     --foreground: 210 40% 98%; /* Light Gray/White Foreground */
     --card: 224 71% 8%; /* Slightly lighter card background */
@@ -63,15 +32,129 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    /* Sidebar vars remain for now, though not explicitly used in request */
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --radius: 0.5rem;
+  }
+  
+  html.font-size-small {
+    --font-base-size: 0.875rem; /* 14px */
+  }
+  /* Default class ensures styles apply if no preference or 'default' is chosen */
+  html.font-size-default { 
+    --font-base-size: 1rem; /* 16px */
+  }
+  html.font-size-large {
+    --font-base-size: 1.125rem; /* 18px */
+  }
+
+  html.theme-kailash-night {
+    --background: 224 71% 4%; 
+    --foreground: 210 40% 98%; 
+    --card: 224 71% 8%; 
+    --card-foreground: 210 40% 98%; 
+    --popover: 224 71% 4%; 
+    --popover-foreground: 210 40% 98%; 
+    --primary: 30 90% 55%; 
+    --primary-foreground: 0 0% 0%; 
+    --secondary: 224 50% 15%; 
+    --secondary-foreground: 210 40% 98%; 
+    --muted: 224 50% 15%; 
+    --muted-foreground: 215 20% 65%; 
+    --accent: 224 50% 15%; 
+    --accent-foreground: 210 40% 98%; 
+    --destructive: 0 63% 31%; 
+    --destructive-foreground: 210 40% 98%; 
+    --border: 215 28% 17%; 
+    --input: 215 28% 17%; 
+    --ring: 30 90% 55%; 
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  /* Sunrise Glow Theme (Light) */
+  html.theme-sunrise-glow {
+    --background: 30 100% 97%; /* Very Light Warm Yellow/Off-white */
+    --foreground: 25 60% 25%; /* Dark Brown */
+    --card: 35 100% 95%; /* Light Warm Yellow */
+    --card-foreground: 25 60% 25%; /* Dark Brown */
+    --popover: 30 100% 97%;
+    --popover-foreground: 25 60% 25%;
+    --primary: 35 100% 60%; /* Brighter Saffron Orange */
+    --primary-foreground: 0 0% 0%; /* Black */
+    --secondary: 40 80% 90%; /* Light Peach */
+    --secondary-foreground: 25 50% 35%; /* Darker Peach Brown */
+    --muted: 40 80% 92%; /* Slightly Muted Peach */
+    --muted-foreground: 30 40% 50%; /* Muted Brown */
+    --accent: 40 80% 90%;
+    --accent-foreground: 25 50% 35%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 30 100% 97%;
+    --border: 30 60% 85%; /* Soft Orange Border */
+    --input: 30 60% 88%; /* Soft Orange Input */
+    --ring: 35 100% 60%; /* Brighter Saffron Orange */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  /* Forest Hermitage Theme (Light-ish) */
+  html.theme-forest-hermitage {
+    --background: 40 30% 95%; /* Light Beige/Cream */
+    --foreground: 120 25% 20%; /* Dark Forest Green */
+    --card: 45 30% 92%; /* Slightly darker Beige */
+    --card-foreground: 120 25% 20%;
+    --popover: 40 30% 95%;
+    --popover-foreground: 120 25% 20%;
+    --primary: 45 70% 50%; /* Muted Gold */
+    --primary-foreground: 0 0% 10%; /* Dark text on gold */
+    --secondary: 90 20% 85%; /* Light Moss Green */
+    --secondary-foreground: 110 25% 30%; /* Darker Moss Green */
+    --muted: 90 20% 88%; /* Slightly Muted Moss */
+    --muted-foreground: 100 15% 50%; /* Muted Green/Gray */
+    --accent: 90 20% 85%;
+    --accent-foreground: 110 25% 30%;
+    --destructive: 0 70% 50%; /* Earthy Red */
+    --destructive-foreground: 40 30% 95%;
+    --border: 75 20% 75%; /* Soft Green/Brown Border */
+    --input: 75 20% 80%; /* Soft Green/Brown Input */
+    --ring: 45 70% 50%; /* Muted Gold */
+    --chart-1: 90 60% 40%;
+    --chart-2: 40 50% 45%;
+    --chart-3: 20 40% 50%;
+    --chart-4: 150 50% 35%;
+    --chart-5: 60 55% 40%;
+  }
+
+  /* Cosmic Void Theme (Dark) */
+  html.theme-cosmic-void {
+    --background: 240 10% 5%; /* Almost Pure Black */
+    --foreground: 220 60% 90%; /* Light Cosmic Blue/Silver */
+    --card: 240 10% 10%; /* Very Dark Gray */
+    --card-foreground: 220 60% 90%;
+    --popover: 240 10% 5%;
+    --popover-foreground: 220 60% 90%;
+    --primary: 45 100% 60%; /* Bright Gold/Yellow */
+    --primary-foreground: 0 0% 0%; /* Black */
+    --secondary: 260 50% 15%; /* Deep Cosmic Purple */
+    --secondary-foreground: 250 60% 85%; /* Lighter Purple */
+    --muted: 260 50% 20%; /* Muted Purple */
+    --muted-foreground: 240 30% 70%; /* Muted Blue/Gray */
+    --accent: 260 50% 15%;
+    --accent-foreground: 250 60% 85%;
+    --destructive: 340 80% 55%; /* Bright Cosmic Pink/Red */
+    --destructive-foreground: 240 10% 5%;
+    --border: 250 40% 25%; /* Dark Purple/Blue Border */
+    --input: 250 40% 30%; /* Dark Purple/Blue Input */
+    --ring: 45 100% 60%; /* Bright Gold/Yellow */
+    --chart-1: 270 70% 60%;
+    --chart-2: 300 60% 55%;
+    --chart-3: 200 80% 65%;
+    --chart-4: 40 70% 50%;
+    --chart-5: 330 75% 60%;
   }
 }
 
@@ -81,6 +164,7 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    font-size: var(--font-base-size); /* Use the CSS variable for base font size */
     /* Add subtle cosmic nebulae effect if desired - consider performance */
     /* background-image: radial-gradient(circle at center, hsla(224, 71%, 15%, 0.5) 0%, hsla(224, 71%, 4%, 0) 70%); */
   }

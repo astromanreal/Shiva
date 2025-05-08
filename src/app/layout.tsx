@@ -1,5 +1,6 @@
+
 import type { Metadata } from 'next';
-import { Geist } from 'next/font/google'; // Removed Geist_Mono as it wasn't explicitly used
+import { Geist } from 'next/font/google';
 import './globals.css';
 import { cn } from '@/lib/utils';
 import Header from '@/components/layout/header';
@@ -22,6 +23,9 @@ const notoSansDevanagari = Noto_Sans_Devanagari({
 export const metadata: Metadata = {
   title: 'ShivaSphere',
   description: 'A digital temple dedicated to Mahadeva - Lord Shiva.',
+  icons: {
+    icon: '/favicon.ico', // Basic favicon
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="theme-kailash-night font-size-default">
       <head>
          {/* Google Font link removed as we are using next/font */}
       </head>

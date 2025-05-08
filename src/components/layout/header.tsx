@@ -4,7 +4,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Moon, Sun, Mail, Menu, ChevronLeft, ChevronRight, Compass } from 'lucide-react'; // Added Compass for Explore
+import { Moon, Sun, Mail, Menu, ChevronLeft, ChevronRight, Compass, Settings } from 'lucide-react'; // Added Settings
 // import { useTheme } from 'next-themes'; // Assuming next-themes is installed for theme toggling
 
 import { Button } from '@/components/ui/button';
@@ -118,15 +118,14 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children, onClick, isIcon = fal
   );
 };
 
-const ITEMS_PER_VIEW = 4; // Adjust number of visible items if needed
-const SCROLL_STEP = 2; // Number of items to scroll on click
+const ITEMS_PER_VIEW = 4; 
+const SCROLL_STEP = 2; 
 
 export default function Header() {
   const isMobile = useIsMobile();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
-  const [startIndex, setStartIndex] = React.useState(0); // For desktop nav slider
+  const [startIndex, setStartIndex] = React.useState(0); 
 
-  // Define all potential navigation items
   const allNavItems = [
     { href: '/avatars', label: 'Avatars' },
     { href: '/rudras', label: 'Rudras' },
@@ -140,11 +139,9 @@ export default function Header() {
     { href: '/maa-kali', label: 'Maa Kali' },
     { href: '/yoga', label: 'Yoga' },
     { href: '/meditation', label: 'Meditation' },
-    // Ask Mahadev is handled separately
-    // Explore is handled separately
   ];
 
-  const navItems = allNavItems; // Use the already filtered list
+  const navItems = allNavItems; 
 
   const totalItems = navItems.length;
   const canScrollPrev = startIndex > 0;
@@ -162,8 +159,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center"> {/* Fixed height */}
-        {/* Logo and Brand Name */}
+      <div className="container flex h-14 max-w-screen-2xl items-center">
         <Link href="/" className="mr-4 flex items-center space-x-2 flex-shrink-0" onClick={() => setIsMobileMenuOpen(false)}>
           <TridentIcon className="h-6 w-6 text-primary" />
           <span className="font-bold inline-block text-lg">
@@ -171,9 +167,7 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Desktop Navigation Slider */}
          <div className="hidden md:flex flex-grow items-center justify-center mx-auto relative">
-             {/* Previous Button */}
              <Button
                 variant="ghost"
                 size="icon"
@@ -188,7 +182,6 @@ export default function Header() {
                 <ChevronLeft className="h-5 w-5" />
             </Button>
 
-             {/* Navigation Links Container */}
              <div className="flex-shrink overflow-hidden">
                  <nav className="flex items-center justify-center gap-x-1 transition-transform duration-300 ease-in-out">
                    {visibleNavItems.map((item) => (
@@ -197,7 +190,6 @@ export default function Header() {
                  </nav>
              </div>
 
-            {/* Next Button */}
             <Button
                 variant="ghost"
                 size="icon"
@@ -213,26 +205,29 @@ export default function Header() {
             </Button>
          </div>
 
-        {/* Right side icons (Desktop) */}
         <div className="hidden md:flex items-center justify-end space-x-1 ml-auto flex-shrink-0">
            <NavLink href="/ask-mahadev">Ask Mahadev</NavLink>
-           {/* Explore Icon Link */}
            <NavLink href="/explore" isIcon={true}>
              <Compass className="h-[1.1rem] w-[1.1rem]" />
            </NavLink>
            <NavLink href="/contact" isIcon={true}>
              <Mail className="h-[1.1rem] w-[1.1rem]" />
            </NavLink>
+           <NavLink href="/settings" isIcon={true}> {/* Added Settings Icon Link */}
+             <Settings className="h-[1.1rem] w-[1.1rem]" />
+           </NavLink>
           <ThemeToggle />
         </div>
 
-        {/* Mobile Menu Trigger */}
         <div className="flex flex-1 items-center justify-end md:hidden space-x-1 ml-auto flex-shrink-0">
            <NavLink href="/contact" isIcon={true}>
              <Mail className="h-[1.1rem] w-[1.1rem]" />
            </NavLink>
             <NavLink href="/explore" isIcon={true}>
                 <Compass className="h-[1.1rem] w-[1.1rem]" />
+            </NavLink>
+            <NavLink href="/settings" isIcon={true}> {/* Added Settings Icon Link for mobile */}
+                <Settings className="h-[1.1rem] w-[1.1rem]" />
             </NavLink>
           <ThemeToggle />
           <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
@@ -246,7 +241,6 @@ export default function Header() {
                 className="w-[250px] sm:w-[300px] flex flex-col p-0"
                 aria-label="Mobile Navigation Menu"
             >
-                {/* Mobile Menu Header */}
                 <div className="p-4 border-b flex items-center justify-between">
                      <SheetClose asChild>
                         <Link href="/" className="flex items-center space-x-2">
@@ -258,7 +252,6 @@ export default function Header() {
                     </SheetClose>
                 </div>
 
-                {/* Mobile Menu Links */}
                 <div className="flex-grow overflow-y-auto p-4">
                     <nav className="flex flex-col space-y-3">
                         {navItems.map((item) => (
