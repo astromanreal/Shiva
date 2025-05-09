@@ -36,6 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="theme-kailash-night font-size-default">
       <head>
+        <meta name="google-site-verification" content="mac7aLjz9hgBPOeatEJp8fZ6RL2GRi8PeWQfgcITzFU" />
          {/* Google Font link removed as we are using next/font */}
       </head>
       <body
