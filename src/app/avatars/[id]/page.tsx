@@ -168,14 +168,14 @@ export default function AvatarPage({ params }: AvatarPageProps) {
                      <div>
                          <h4 className="font-semibold flex items-center gap-1 mb-1"><Star className="h-4 w-4"/> Symbols</h4>
                          <div className="flex flex-wrap gap-2">
-                            {avatar.iconography.symbols.map(item => <Badge key={item} variant="secondary">{item}</Badge>)}
+                            {(avatar.iconography.symbols || []).map(item => <Badge key={item} variant="secondary">{item}</Badge>)}
                          </div>
                      </div>
                       {avatar.iconography.weapons && avatar.iconography.weapons.length > 0 && (
                          <div>
                              <h4 className="font-semibold flex items-center gap-1 mb-1"><Swords className="h-4 w-4"/> Weapons</h4>
                              <div className="flex flex-wrap gap-2">
-                                {avatar.iconography.weapons.map(item => <Badge key={item} variant="secondary">{item}</Badge>)}
+                                {(avatar.iconography.weapons || []).map(item => <Badge key={item} variant="secondary">{item}</Badge>)}
                              </div>
                          </div>
                       )}
@@ -186,7 +186,7 @@ export default function AvatarPage({ params }: AvatarPageProps) {
                      <div>
                          <h4 className="font-semibold flex items-center gap-1 mb-1"><Wind className="h-4 w-4"/> Associated Elements</h4>
                          <div className="flex flex-wrap gap-2">
-                            {avatar.iconography.associatedElements.map(item => <Badge key={item} variant="secondary">{item}</Badge>)}
+                            {(avatar.iconography.associatedElements || []).map(item => <Badge key={item} variant="secondary">{item}</Badge>)}
                          </div>
                      </div>
                  </div>
