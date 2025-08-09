@@ -1,3 +1,4 @@
+
 // src/components/layout/header.tsx
 'use client';
 
@@ -5,7 +6,6 @@ import * as React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Moon, Sun, Mail, Menu, ChevronLeft, ChevronRight, Compass, Settings } from 'lucide-react'; // Added Settings
-// import { useTheme } from 'next-themes'; // Assuming next-themes is installed for theme toggling
 
 import { Button } from '@/components/ui/button';
 import {
@@ -41,38 +41,37 @@ const TridentIcon = (props: React.SVGProps<SVGSVGElement>) => (
   );
 
 
-// Placeholder for theme toggle logic
-const ThemeToggle = () => {
-  // const { setTheme, theme } = useTheme();
-  const [currentTheme, setCurrentTheme] = React.useState('dark'); // Placeholder
-
-  const toggleTheme = () => {
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setCurrentTheme(newTheme);
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-    // setTheme(newTheme); // Uncomment when next-themes is integrated
-  };
-
-  // Avoid hydration mismatch by setting theme only on client
-  React.useEffect(() => {
-     // Ensure this code runs only on the client
-     if (typeof window !== 'undefined') {
-        const isDark = document.documentElement.classList.contains('dark');
-        setCurrentTheme(isDark ? 'dark' : 'light');
-     }
-  }, []);
-
-
-  return (
-    <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
-      {currentTheme === 'dark' ? (
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
-      ) : (
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
-      )}
-    </Button>
-  );
+// Helper function to manage themes
+const applyTheme = (theme: string) => {
+    const allThemes = ['theme-kailash-night', 'theme-sunrise-glow', 'theme-forest-hermitage', 'theme-cosmic-void'];
+    allThemes.forEach(t => document.documentElement.classList.remove(t));
+    document.documentElement.classList.add(theme);
+    localStorage.setItem('theme', theme);
 };
+
+const ThemeToggle = () => {
+    const [currentTheme, setCurrentTheme] = React.useState('theme-kailash-night');
+    const isDarkMode = currentTheme === 'theme-kailash-night' || currentTheme === 'theme-cosmic-void';
+
+    React.useEffect(() => {
+        const storedTheme = localStorage.getItem('theme') || 'theme-kailash-night';
+        setCurrentTheme(storedTheme);
+        applyTheme(storedTheme);
+    }, []);
+
+    const toggleTheme = () => {
+        const newTheme = isDarkMode ? 'theme-sunrise-glow' : 'theme-kailash-night';
+        setCurrentTheme(newTheme);
+        applyTheme(newTheme);
+    };
+
+    return (
+        <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
+            {isDarkMode ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
+        </Button>
+    );
+};
+
 
 interface NavLinkProps {
   href: string;
@@ -123,6 +122,7 @@ const SCROLL_STEP = 2;
 
 export default function Header() {
   const isMobile = useIsMobile();
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
   const [startIndex, setStartIndex] = React.useState(0); 
 
@@ -140,10 +140,29 @@ export default function Header() {
     { href: '/yoga', label: 'Yoga' },
     { href: '/meditation', label: 'Meditation' },
   ];
-
+  
   const navItems = allNavItems; 
-
   const totalItems = navItems.length;
+
+  React.useEffect(() => {
+    if (isMobile) return;
+
+    const activeIndex = navItems.findIndex(item => pathname.startsWith(item.href) && item.href !== '/');
+    
+    if (activeIndex !== -1) {
+      const lastVisibleIndex = startIndex + ITEMS_PER_VIEW - 1;
+      
+      if (activeIndex < startIndex || activeIndex > lastVisibleIndex) {
+        // Active item is out of view, adjust startIndex
+        let newStartIndex = Math.floor(activeIndex / ITEMS_PER_VIEW) * ITEMS_PER_VIEW;
+        // Ensure newStartIndex doesn't go out of bounds
+        newStartIndex = Math.min(newStartIndex, totalItems - ITEMS_PER_VIEW);
+        setStartIndex(newStartIndex);
+      }
+    }
+  }, [pathname, isMobile, navItems, startIndex, totalItems]);
+
+
   const canScrollPrev = startIndex > 0;
   const canScrollNext = startIndex < totalItems - ITEMS_PER_VIEW;
 
@@ -206,7 +225,6 @@ export default function Header() {
          </div>
 
         <div className="hidden md:flex items-center justify-end space-x-1 ml-auto flex-shrink-0">
-           <NavLink href="/ask-mahadev">Ask Mahadev</NavLink>
            <NavLink href="/explore" isIcon={true}>
              <Compass className="h-[1.1rem] w-[1.1rem]" />
            </NavLink>
@@ -262,9 +280,6 @@ export default function Header() {
                         </SheetClose>
                         ))}
                          <SheetClose asChild>
-                             <NavLink href="/ask-mahadev" onClick={() => setIsMobileMenuOpen(false)}>Ask Mahadev</NavLink>
-                         </SheetClose>
-                          <SheetClose asChild>
                              <NavLink href="/explore" onClick={() => setIsMobileMenuOpen(false)}>Explore</NavLink>
                          </SheetClose>
                     </nav>

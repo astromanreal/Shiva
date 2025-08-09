@@ -40,7 +40,7 @@ export default function SuryaNamaskarPage() {
       {/* Optional Image */}
        <div className="my-8 overflow-hidden rounded-lg shadow-lg aspect-w-16 aspect-h-9 max-w-2xl mx-auto">
             <Image
-                src="https://picsum.photos/seed/surya-namaskar-sequence/800/450" // Placeholder image
+                src="https://i.pinimg.com/1200x/31/c5/40/31c540b60774f4df0243686dc9c7cec1.jpg" // Using a relevant image
                 alt="Surya Namaskar sequence illustration"
                 width={800}
                 height={450}
@@ -67,8 +67,7 @@ export default function SuryaNamaskarPage() {
                 <TableHead className="w-[50px]">Step</TableHead>
                 <TableHead>Asana (Posture)</TableHead>
                 <TableHead>Sanskrit Mantra</TableHead>
-                <TableHead>Transliteration</TableHead>
-                <TableHead>Translation Prefix</TableHead>
+                <TableHead>Translation</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -79,7 +78,6 @@ export default function SuryaNamaskarPage() {
                   <TableCell>
                      <SanskritTextDisplay text={item.sanskritMantra} className="text-base"/>
                   </TableCell>
-                  <TableCell className="font-mono text-sm">{item.mantra}</TableCell>
                   <TableCell className="text-muted-foreground text-sm italic">"...{item.translation}"</TableCell>
                 </TableRow>
               ))}

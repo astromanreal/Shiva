@@ -14,19 +14,19 @@
     --card-foreground: 210 40% 98%; /* Card foreground */
     --popover: 224 71% 4%; /* Popover background */
     --popover-foreground: 210 40% 98%; /* Popover foreground */
-    --primary: 30 90% 55%; /* Saffron orange accent */
-    --primary-foreground: 0 0% 0%; /* Black for primary button text */
-    --secondary: 224 50% 15%; /* Dark secondary */
-    --secondary-foreground: 210 40% 98%; /* Dark secondary foreground */
-    --muted: 224 50% 15%; /* Dark muted */
-    --muted-foreground: 215 20% 65%; /* Dark muted foreground */
-    --accent: 224 50% 15%; /* Dark accent */
-    --accent-foreground: 210 40% 98%; /* Dark accent foreground */
-    --destructive: 0 63% 31%; /* Dark destructive */
-    --destructive-foreground: 210 40% 98%; /* Dark destructive foreground */
-    --border: 215 28% 17%; /* Dark border */
-    --input: 215 28% 17%; /* Dark input */
-    --ring: 30 90% 55%; /* Saffron orange for ring */
+    --primary: 45 100% 60%; /* Saffron orange accent -> Changed to Bright Gold */
+    --primary-foreground: 0 0% 10%; /* Black for primary button text -> Changed for gold */
+    --secondary: 260 50% 15%; /* Dark secondary -> Deep Cosmic Purple */
+    --secondary-foreground: 250 60% 85%; /* Dark secondary foreground -> Lighter Purple */
+    --muted: 260 50% 20%; /* Dark muted -> Muted Purple */
+    --muted-foreground: 240 30% 70%; /* Dark muted foreground -> Muted Blue/Gray */
+    --accent: 260 50% 15%; /* Dark accent -> Deep Cosmic Purple */
+    --accent-foreground: 250 60% 85%; /* Dark accent foreground -> Lighter Purple */
+    --destructive: 340 80% 55%; /* Dark destructive -> Bright Cosmic Pink/Red */
+    --destructive-foreground: 240 10% 5%; /* Dark destructive foreground */
+    --border: 250 40% 25%; /* Dark border -> Dark Purple/Blue */
+    --input: 250 40% 30%; /* Dark input -> Dark Purple/Blue */
+    --ring: 45 100% 60%; /* Saffron orange for ring -> Bright Gold */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -46,6 +46,7 @@
     --font-base-size: 1.125rem; /* 18px */
   }
 
+  /* Kailash Night Theme (Default Dark) */
   html.theme-kailash-night {
     --background: 224 71% 4%; 
     --foreground: 210 40% 98%; 
@@ -73,7 +74,7 @@
     --chart-5: 340 75% 55%;
   }
 
-  /* Sunrise Glow Theme (Light) */
+  /* Sunrise Glow Theme (Light - Jyoti) */
   html.theme-sunrise-glow {
     --background: 30 100% 97%; /* Very Light Warm Yellow/Off-white */
     --foreground: 25 60% 25%; /* Dark Brown */
@@ -129,7 +130,7 @@
     --chart-5: 60 55% 40%;
   }
 
-  /* Cosmic Void Theme (Dark) */
+  /* Cosmic Void Theme (Dark - Tamas) */
   html.theme-cosmic-void {
     --background: 240 10% 5%; /* Almost Pure Black */
     --foreground: 220 60% 90%; /* Light Cosmic Blue/Silver */
@@ -138,7 +139,7 @@
     --popover: 240 10% 5%;
     --popover-foreground: 220 60% 90%;
     --primary: 45 100% 60%; /* Bright Gold/Yellow */
-    --primary-foreground: 0 0% 0%; /* Black */
+    --primary-foreground: 0 0% 10%; /* Dark text on gold */
     --secondary: 260 50% 15%; /* Deep Cosmic Purple */
     --secondary-foreground: 250 60% 85%; /* Lighter Purple */
     --muted: 260 50% 20%; /* Muted Purple */

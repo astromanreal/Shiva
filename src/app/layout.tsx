@@ -1,4 +1,3 @@
-
 import type { Metadata } from 'next';
 import { Geist } from 'next/font/google';
 import './globals.css';
@@ -35,9 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="theme-kailash-night font-size-default">
-      <head>
-         {/* Google Font link removed as we are using next/font */}
-      </head>
+      <head />
       <body
         className={cn(
           geistSans.variable,

@@ -1,14 +1,14 @@
 
 
-import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { getAllMantras, Mantra } from '@/data/mantras';
-import { BookOpen, Mic2, Brain, Info } from 'lucide-react'; // Icons
+import { BookOpen, Mic2, Brain, Info, CircleDot, Star, Book } from 'lucide-react'; // Icons
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
-// Helper component for rendering Sanskrit text (copied from stotras detail page for isolation)
+// Helper component for rendering Sanskrit text
 const SanskritTextDisplay: React.FC<{ text: string; className?: string }> = ({ text, className }) => {
   const isDevanagari = /[\u0900-\u097F]/.test(text);
   return (
@@ -43,28 +43,17 @@ export default function MantrasPage() {
       </div>
 
       {/* Mantra List */}
-      <div className="space-y-8">
+      <div className="space-y-6">
         {mantras.map((mantra) => (
-          <Card key={mantra.id} className="shadow-md border border-border/50 overflow-hidden transition-shadow hover:shadow-lg">
-             {/* Optional Image Header REMOVED as per user request */}
-             {/*
-             {mantra.aiHint && (
-                <div className="aspect-[16/7] relative overflow-hidden bg-secondary/20">
-                <Image
-                    src={`https://picsum.photos/seed/${mantra.id}/600/262`}
-                    alt={mantra.title}
-                    width={600}
-                    height={262}
-                    className="object-cover w-full h-full opacity-80"
-                    data-ai-hint={mantra.aiHint}
-                />
-                </div>
-             )}
-             */}
-
+          <Card key={mantra.id} className="shadow-md border border-border/50 overflow-hidden transition-shadow hover:shadow-lg bg-card/90 backdrop-blur-sm">
              <CardHeader className="pt-4 pb-2">
                 <CardTitle className="text-xl md:text-2xl text-primary">{mantra.title}</CardTitle>
-                {/* Optional: Add a brief description if needed in data */}
+                {mantra.sanskritTitle && <CardDescription className="font-noto_sans_devanagari text-xl text-muted-foreground">{mantra.sanskritTitle}</CardDescription>}
+                {mantra.purpose && <CardDescription className="pt-2">{mantra.purpose}</CardDescription>}
+                 <div className="flex flex-wrap gap-2 pt-2">
+                    {mantra.type && <Badge variant="secondary"><CircleDot className="h-3 w-3 mr-1"/> {mantra.type}</Badge>}
+                    {mantra.origin && <Badge variant="outline"><Book className="h-3 w-3 mr-1"/> {mantra.origin}</Badge>}
+                 </div>
              </CardHeader>
 
              <CardContent className="p-4 md:p-6 space-y-4">
@@ -79,7 +68,7 @@ export default function MantrasPage() {
                      <AccordionItem value="details" className="border-b-0">
                        <AccordionTrigger className="text-sm text-muted-foreground hover:text-foreground/90 hover:no-underline pt-1 pb-2">
                          <span className="flex items-center gap-1">
-                            <Info className="h-4 w-4"/> Show Details (Transliteration & Meaning)
+                            <Info className="h-4 w-4"/> Show Details
                          </span>
                        </AccordionTrigger>
                        <AccordionContent className="space-y-4 pt-2">

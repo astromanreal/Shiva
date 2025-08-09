@@ -1,4 +1,6 @@
 
+'use client'; // This component uses Date(), so it must be a client component
+
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -7,6 +9,7 @@ import { avatarsData } from '@/data/avatars';
 import { eventsData } from '@/data/events';
 import { stotrasData } from '@/data/stotras';
 import { jyotirlingasData } from '@/data/jyotirlingas';
+import { useEffect, useState } from 'react';
 
 const getDayOfYear = () => {
     const now = new Date();
@@ -17,7 +20,16 @@ const getDayOfYear = () => {
 };
 
 export default function TodaysRead() {
-    const dayOfYear = getDayOfYear();
+    const [dayOfYear, setDayOfYear] = useState<number | null>(null);
+
+    useEffect(() => {
+        setDayOfYear(getDayOfYear());
+    }, []);
+
+    if (dayOfYear === null) {
+        // You can return a loading skeleton here if you want
+        return null; 
+    }
 
     // Select daily items using modulo arithmetic
     const featuredAvatar = avatarsData[dayOfYear % avatarsData.length];
@@ -46,7 +58,7 @@ export default function TodaysRead() {
             id: featuredStotra.id,
             type: 'Stotra',
             title: featuredStotra.title,
-            description: featuredStotra.description,
+            description: featuredStotra.theme || featuredStotra.description, // Use theme if available
             link: `/stotras/${featuredStotra.id}`,
             icon: BookOpenText,
         },
@@ -65,25 +77,23 @@ export default function TodaysRead() {
             <h2 className="text-3xl font-bold tracking-tight text-center text-primary">Today's Read</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {items.map((item) => (
-                    <Card key={item.id} className="group flex flex-col h-full transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:scale-[1.03] bg-card/90 backdrop-blur-sm overflow-hidden p-4">
-                        {/* Image Removed */}
-                        <CardHeader className="pb-2 pt-2 px-0 relative">
-                            <CardTitle className="text-lg text-primary flex items-center gap-2"> {/* Reduced title size */}
+                    <Card key={item.id} className="group flex flex-col h-full transition-all duration-300 ease-in-out hover:shadow-xl hover:border-primary/50 hover:scale-[1.03] bg-card/90 backdrop-blur-sm overflow-hidden">
+                        <CardHeader className="pb-2 pt-4 px-4 relative">
+                            <CardTitle className="text-lg text-primary flex items-center gap-2">
                                 <item.icon className="h-4 w-4 flex-shrink-0"/> {item.title}
                             </CardTitle>
-                             {/* Item Type Badge - Adjusted Position */}
-                             <span className="absolute top-0 right-0 bg-secondary text-secondary-foreground text-xs font-semibold px-2 py-0.5 rounded-full border border-border/50">
+                             <span className="absolute top-2 right-2 bg-secondary text-secondary-foreground text-xs font-semibold px-2 py-0.5 rounded-full border border-border/50">
                                 {item.type}
                              </span>
                         </CardHeader>
-                        <CardContent className="flex-grow flex flex-col justify-between pt-1 pb-2 px-0"> {/* Adjusted padding */}
-                            <CardDescription className="text-xs text-muted-foreground mb-3 line-clamp-4"> {/* Reduced font size, increased line clamp slightly */}
+                        <CardContent className="flex-grow flex flex-col justify-between pt-1 pb-4 px-4">
+                            <CardDescription className="text-xs text-muted-foreground mb-3 line-clamp-4 h-[60px]">
                                 {item.description}
                             </CardDescription>
                             <Link href={item.link} className="mt-auto">
-                                <Button variant="outline" size="sm" className="w-full justify-center group/button text-xs"> {/* Reduced button size and text */}
-                                    Explore
-                                    <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/button:translate-x-1" /> {/* Adjusted icon size */}
+                                <Button variant="outline" size="sm" className="w-full justify-center group/button text-xs">
+                                    Learn More
+                                    <ArrowRight className="ml-1.5 h-3.5 w-3.5 transition-transform group-hover/button:translate-x-1" />
                                 </Button>
                             </Link>
                         </CardContent>

@@ -1,3 +1,4 @@
+
 export interface KaalBhairavaInfo {
     id: string;
     title: string;
@@ -95,4 +96,3 @@ export const kaalBhairavaData: KaalBhairavaInfo = {
 export const getKaalBhairavaData = (): KaalBhairavaInfo => {
   return kaalBhairavaData;
 };
-

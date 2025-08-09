@@ -13,13 +13,13 @@ interface ThemeOption {
 }
 
 const themes: ThemeOption[] = [
-  { value: 'theme-kailash-night', label: 'Kailash Night (Default)', icon: Moon },
-  { value: 'theme-sunrise-glow', label: 'Sunrise Glow', icon: Sun },
-  { value: 'theme-forest-hermitage', label: 'Forest Hermitage', icon: Leaf },
+  { value: 'theme-sunrise-glow', label: 'Sunrise Glow (Default)', icon: Sun },
   { value: 'theme-cosmic-void', label: 'Cosmic Void', icon: CosmicIcon },
+  { value: 'theme-kailash-night', label: 'Kailash Night', icon: Moon },
+  { value: 'theme-forest-hermitage', label: 'Forest Hermitage', icon: Leaf },
 ];
 
-const DEFAULT_THEME = 'theme-kailash-night';
+const DEFAULT_THEME = 'theme-sunrise-glow';
 
 export default function ThemeSettingsClient() {
   const [selectedTheme, setSelectedTheme] = useState<string>(DEFAULT_THEME);
