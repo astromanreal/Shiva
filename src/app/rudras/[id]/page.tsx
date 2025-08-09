@@ -348,5 +348,4 @@ export default function RudraPage({ params }: RudraPageProps) {
 
     </div>
   );
-
-    
+}
