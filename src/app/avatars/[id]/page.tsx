@@ -138,9 +138,9 @@ export default function AvatarPage({ params }: AvatarPageProps) {
         {avatar.sanskritName && (
              <p className="font-noto_sans_devanagari text-2xl text-muted-foreground">{avatar.sanskritName}</p>
         )}
-        {avatar.alternativeNames && avatar.alternativeNames.length > 0 && (
+        {(avatar.alternativeNames || []).length > 0 && (
             <div className="flex flex-wrap justify-center gap-2">
-                {avatar.alternativeNames.map(name => <Badge key={name} variant="outline">{name}</Badge>)}
+                {(avatar.alternativeNames || []).map(name => <Badge key={name} variant="outline">{name}</Badge>)}
             </div>
         )}
         <p className="text-lg text-foreground/80 max-w-2xl mx-auto pt-2">
@@ -171,7 +171,7 @@ export default function AvatarPage({ params }: AvatarPageProps) {
                             {(avatar.iconography.symbols || []).map(item => <Badge key={item} variant="secondary">{item}</Badge>)}
                          </div>
                      </div>
-                      {avatar.iconography.weapons && avatar.iconography.weapons.length > 0 && (
+                      {(avatar.iconography.weapons || []).length > 0 && (
                          <div>
                              <h4 className="font-semibold flex items-center gap-1 mb-1"><Swords className="h-4 w-4"/> Weapons</h4>
                              <div className="flex flex-wrap gap-2">
@@ -194,14 +194,14 @@ export default function AvatarPage({ params }: AvatarPageProps) {
         </Card>
       )}
 
-      {avatar.stories && avatar.stories.length > 0 && (
+      {(avatar.stories || []).length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2"><BookOpenText className="h-5 w-5 text-primary"/> Stories & Legends</CardTitle>
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible className="w-full">
-                {avatar.stories.map((story, index) => (
+                {(avatar.stories || []).map((story, index) => (
                    <AccordionItem key={index} value={`item-${index}`}>
                      <AccordionTrigger>{story.title}</AccordionTrigger>
                      <AccordionContent className="space-y-2">
@@ -226,14 +226,14 @@ export default function AvatarPage({ params }: AvatarPageProps) {
         </Card>
       )}
 
-      {avatar.spiritualLessons && avatar.spiritualLessons.length > 0 && (
+      {(avatar.spiritualLessons || []).length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2"><Heart className="h-5 w-5 text-primary"/> Spiritual Lessons</CardTitle>
           </CardHeader>
           <CardContent>
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-              {avatar.spiritualLessons.map((lesson, index) => (
+              {(avatar.spiritualLessons || []).map((lesson, index) => (
                 <li key={index}>{lesson}</li>
               ))}
             </ul>
@@ -242,13 +242,13 @@ export default function AvatarPage({ params }: AvatarPageProps) {
       )}
 
 
-      {avatar.associatedDeities && avatar.associatedDeities.length > 0 && (
+      {(avatar.associatedDeities || []).length > 0 && (
           <Card>
                <CardHeader>
                  <CardTitle className="flex items-center gap-2"><Users2 className="h-5 w-5 text-primary"/> Associated Deities</CardTitle>
                </CardHeader>
                <CardContent className="space-y-2">
-                    {avatar.associatedDeities.map(deity => (
+                    {(avatar.associatedDeities || []).map(deity => (
                         <div key={deity.name}>
                             <h4 className="font-semibold">{deity.name}</h4>
                             <p className="text-sm text-muted-foreground">{deity.relation}</p>
@@ -258,13 +258,13 @@ export default function AvatarPage({ params }: AvatarPageProps) {
           </Card>
       )}
 
-       {avatar.majorTemples && avatar.majorTemples.length > 0 && (
+       {(avatar.majorTemples || []).length > 0 && (
           <Card>
                <CardHeader>
                  <CardTitle className="flex items-center gap-2"><Building className="h-5 w-5 text-primary"/> Major Temples</CardTitle>
                </CardHeader>
                <CardContent className="space-y-3">
-                    {avatar.majorTemples.map(temple => (
+                    {(avatar.majorTemples || []).map(temple => (
                         <div key={temple.name}>
                             <h4 className="font-semibold">{temple.name}</h4>
                             <p className="text-sm text-muted-foreground flex items-center gap-1"><MapPin className="h-3 w-3"/> {temple.location}</p>
@@ -275,20 +275,20 @@ export default function AvatarPage({ params }: AvatarPageProps) {
           </Card>
       )}
 
-       {(avatar.mantras || avatar.chantsMantras) && (
+       {((avatar.mantras || []).length > 0 || (avatar.chantsMantras || []).length > 0) && (
         <Card>
           <CardHeader>
              <CardTitle className="flex items-center gap-2"><Mic className="h-5 w-5 text-primary"/> Mantras & Chants</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            {avatar.mantras && avatar.mantras.map((mantra, index) => (
+            {(avatar.mantras || []).map((mantra, index) => (
               <div key={`simple-mantra-${index}`} className="p-3 border rounded-md bg-secondary/30">
                  <MantraText text={mantra} />
               </div>
             ))}
-            {avatar.chantsMantras && (
+            {(avatar.chantsMantras || []).length > 0 && (
                  <Accordion type="single" collapsible className="w-full">
-                    {avatar.chantsMantras.map((chant, index) => (
+                    {(avatar.chantsMantras || []).map((chant, index) => (
                        <AccordionItem key={index} value={`item-${index}`}>
                          <AccordionTrigger>{chant.name}</AccordionTrigger>
                          <AccordionContent className="space-y-3">
@@ -306,47 +306,47 @@ export default function AvatarPage({ params }: AvatarPageProps) {
         </Card>
       )}
 
-      {avatar.scripturalReferences && avatar.scripturalReferences.length > 0 && (
+      {(avatar.scripturalReferences || []).length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2"><Library className="h-5 w-5 text-primary"/> Scriptural References</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
-            {avatar.scripturalReferences.map((text, index) => (
+            {(avatar.scripturalReferences || []).map((text, index) => (
               <Badge key={index} variant="secondary">{text}</Badge>
             ))}
           </CardContent>
         </Card>
       )}
 
-       {avatar.relatedStotras && avatar.relatedStotras.length > 0 && (
+       {(avatar.relatedStotras || []).length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2"><BookHeart className="h-5 w-5 text-primary"/> Related Stotras</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
-            {avatar.relatedStotras.map((stotra, index) => (
+            {(avatar.relatedStotras || []).map((stotra, index) => (
               <Badge key={index} variant="outline">{stotra}</Badge>
             ))}
           </CardContent>
         </Card>
       )}
 
-      {avatar.festivalCelebrations && avatar.festivalCelebrations.length > 0 && (
+      {(avatar.festivalCelebrations || []).length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2"><Calendar className="h-5 w-5 text-primary"/> Festival Celebrations</CardTitle>
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible className="w-full">
-                {avatar.festivalCelebrations.map((festival, index) => (
+                {(avatar.festivalCelebrations || []).map((festival, index) => (
                    <AccordionItem key={index} value={`item-${index}`}>
                      <AccordionTrigger>{festival.name}</AccordionTrigger>
                      <AccordionContent className="space-y-2">
                        <p className="text-muted-foreground">{festival.significance}</p>
                         <h4 className="font-semibold text-sm pt-2">Rituals:</h4>
                         <ul className="list-disc list-inside text-sm text-muted-foreground">
-                           {festival.rituals.map((ritual, rIndex) => <li key={rIndex}>{ritual}</li>)}
+                           {(festival.rituals || []).map((ritual, rIndex) => <li key={rIndex}>{ritual}</li>)}
                         </ul>
                      </AccordionContent>
                    </AccordionItem>
@@ -356,7 +356,7 @@ export default function AvatarPage({ params }: AvatarPageProps) {
         </Card>
       )}
 
-      {avatar.tags && avatar.tags.length > 0 && (
+      {((avatar.tags || []).length > 0 || (avatar.relatedConcepts || []).length > 0) && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2"><Tags className="h-5 w-5 text-primary"/> Related Concepts & Tags</CardTitle>

@@ -129,7 +129,7 @@ export default function KaalBhairavaPage() {
                 onMouseLeave={plugin.current.reset}
             >
                 <CarouselContent>
-                    {images.map((image) => (
+                    {(images || []).map((image) => (
                         <CarouselItem key={image.id}>
                             <div className="p-1">
                                 <Card className="overflow-hidden">
@@ -162,7 +162,7 @@ export default function KaalBhairavaPage() {
           </CardHeader>
           <CardContent>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-              {data.symbolism.map((item, index) => (
+              {(data.symbolism || []).map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -175,7 +175,7 @@ export default function KaalBhairavaPage() {
           </CardHeader>
           <CardContent>
             <ul className="list-disc list-inside space-y-1 text-muted-foreground">
-              {data.significance.map((point, index) => (
+              {(data.significance || []).map((point, index) => (
                 <li key={index}>{point}</li>
               ))}
             </ul>
@@ -192,7 +192,7 @@ export default function KaalBhairavaPage() {
             <div>
                 <h3 className="font-semibold mb-1 text-foreground/90">Common Worship Practices:</h3>
                  <ul className="list-disc list-inside space-y-1 text-muted-foreground text-sm">
-                    {data.worship.map((item, index) => (
+                    {(data.worship || []).map((item, index) => (
                         <li key={index}>{item}</li>
                     ))}
                 </ul>
@@ -214,7 +214,7 @@ export default function KaalBhairavaPage() {
         </CardHeader>
         <CardContent>
            <Accordion type="single" collapsible className="w-full" defaultValue="item-1">
-             {data.ashtakam.map((verse) => (
+             {(data.ashtakam || []).map((verse) => (
                <AccordionItem key={verse.verse} value={`item-${verse.verse}`}>
                  <AccordionTrigger className="text-left hover:no-underline text-lg">
                     <span className="font-semibold text-primary mr-2">Verse {verse.verse}</span>
