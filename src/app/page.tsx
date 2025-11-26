@@ -154,7 +154,7 @@ export default function Home() {
                <CardTitle className="flex items-center gap-2"><Sparkles className="text-primary"/> Other Names</CardTitle>
              </CardHeader>
              <CardContent className="flex flex-wrap gap-2">
-               {["Bhairava", "Mahadeva", "Mahakala", "Maheśvara", "Pashupati", "Rudra", "Shambhu", "Shankara"].map(name => (
+               {["Bhairava", "Mahadeva", "Mahakala", "Maheśvara", "Pashupati", "Rudra", "Shambhu", "Shankara"].map((name) => (
                  <Badge key={name} variant="outline">{name}</Badge>
                ))}
              </CardContent>
@@ -251,3 +251,4 @@ export default function Home() {
       </section>
     </div>
   );
+}
