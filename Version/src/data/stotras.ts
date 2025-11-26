@@ -265,7 +265,7 @@ export const stotrasData: Stotra[] = [
                 verse: 9,
                 sanskrit: "लिङ्गाष्टकमिदं पुण्यं यः पठेत् शिवसन्निधौ ।\nशिवलोकमवाप्नोति शिवेन सह मोदते ॥",
                 meaning: "Whoever reads this sacred Lingashtakam in the presence of Shiva, attains the abode of Shiva (Shivaloka) and rejoices with Shiva.",
-                transliteration: "Linggaassttakam-Idam Punnyam Yah Patthet Shiva-Sannidhau |\nShiva-Lokam-Avaapnoti Shivena Saha Modate ||"
+                transliteration: "Linggaassttakam-Idam Punnyam Yah Patthet Shiva-Sannidhau |\nShivalokam-Avaapnoti Shivena Saha Modate ||"
             }
         ],
         aiHint: "shiva lingam worship eight verses adi shankaracharya",
@@ -308,7 +308,7 @@ export const stotrasData: Stotra[] = [
             },
             {
                 verse: 6,
-                sanskrit: "कलातीत कल्याण कल्पान्तकारी\nपदा सज्जनानन्ददाता पुरारी ।\nचिदानन्द संदोह मोहापहारी\nप्रसीद प्रसीद प्रभो मन्मथारी ॥६॥",
+                sanskrit: "कलातीत कल्याण कल्पान्तकारी\nसदा सज्जनानन्ददाता पुरारी ।\nचिदानन्द संदोह मोहापहारी\nप्रसीद प्रसीद प्रभो मन्मथारी ॥६॥",
                 meaning: "Beyond arts, auspicious, the cause of dissolution at the end of Kalpas (eons). Always the bestower of joy to the virtuous, the enemy of Tripura. The mass of consciousness and bliss, the remover of delusion. Be pleased, be pleased, O Lord, enemy of Manmatha (God of Love)!"
             },
             {
@@ -360,7 +360,7 @@ export const stotrasData: Stotra[] = [
             },
             {
                 verse: 4,
-                sanskrit: "आत्मा त्वं गिरिजा मतिः सहचराः प्राणाः शरीरं गृहं\nपूजा ते विषयोपभोगरचना निद्रा समाधिस्थितिः ।\nசஞ்சாரః పదయోః ప్రదక్షిణవిధిః స్తోత్రాణి సర్వా గిరో\nయద్యత్కర్మ కరోమి తత్తదఖిలం शम्भो तवाराधनम् ॥४॥",
+                sanskrit: "आत्मा त्वं गिरिजा मतिः सहचराः प्राणाः शरीरं गृहं\nपूजा ते विषयोपभोगरचना निद्रा समाधिस्थितिः ।\nसञ्चारः पदयोः प्रदक्षिणविधिः स्तोत्राणि सर्वा गिरो\nयद्यत्कर्म करोमि तत्तदखिलं शम्भो तवाराधनम् ॥४॥",
                 meaning: "O Shambho! You are my Self, Girija (Parvati) is my intellect, Your attendants are my vital breaths (Pranas), my body is Your home. My worship of You is the experience of sense objects, my sleep is the state of Samadhi. My walking is the ritual of circumambulation around You, all my speech are hymns to You. Whatever actions I perform, all that is Your worship.",
                 transliteration: "Aatmaa Tvam Girijaa Matih Sahacaraah Praannaah Shariiram Grham\nPuujaa Te Vissayo[a-U]pabhoga-Racanaa Nidraa Samaadhi-Sthitih |\nSan.caarah Padayoh Pradakssinna-Vidhih Stotraanni Sarvaa Giro\nYad-Yat-Karma Karomi Tat-Tad-Akhilam Shambho Tava-Araadhanam ||4||"
             },
@@ -610,7 +610,7 @@ export const stotrasData: Stotra[] = [
             },
             {
                 verse: 8,
-                sanskrit: "आदित्यसोमवरुणानिलसेविताय\nयज्ञाग्निहोत्रवरधूमनिकेतनाय ।\nऋक्सामवेदमुनिभिः स्तुतिसंयुताय\nगोपાય गोपनमिताय नमः शिवाय ॥८॥",
+                sanskrit: "आदित्यसोमवरुणानिलसेविताय\nयज्ञाग्निहोत्रवरधूमनिकेतनाय ।\nऋक्सामवेदमुनिभिः स्तुतिसंयुताय\nगोपाय गोपनमिताय नमः शिवाय ॥८॥",
                 meaning: "Salutations to Him, served by Aditya (Sun), Soma (Moon), Varuna, and Anila (Wind). Whose abode is the sacred smoke of Yajna and Agnihotra. Praised with hymns by the sages of Rig and Sama Vedas. The protector, bowed to by the Gopas (or protectors). Salutations to Shiva!",
                 transliteration: "Aaditya-Soma-Varunna-Anila-Sevitaaya\nYajnya-Agnihotra-Vara-Dhuuma-Niketanaaya |\nRk-Saama-Veda-Munibhih Stuti-Samyutaaya\nGopaaya Gopa-Namitaaya Namah Shivaaya ||8||"
             },
@@ -661,66 +661,12 @@ export const stotrasData: Stotra[] = [
         title: "Bilvashtakam",
         sanskritTitle: "बिल्वाष्टकम्",
         deity: "Shiva",
-        composer: "Attributed to Adi Shankaracharya",
-        verse_count: "9 verses",
+        composer: "Unknown",
+        verse_count: "8 verses",
         theme: "Praises the sacred Bilva leaves offered to Shiva.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "त्रिदलं त्रिगुणाकारं त्रिनेत्रं च त्रयायुधम् ।\nत्रिजन्मपापसंहारं एकबिल्वं शिवार्पणम् ॥१॥",
-                transliteration: "Tridalam Trigunakaram Trinetram Cha Triyayudham |\nTrijanma Papa Samharam Eka Bilvam Shivarpanam ||1||",
-                meaning: "I offer a trifoliate Bilva leaf to Lord Shiva, which embodies the three gunas (Sattva, Rajas, Tamas), represents his three eyes, and is like his three-pronged weapon (Trishula). May this offering destroy the sins of my past three lives."
-            },
-            {
-                verse: 2,
-                sanskrit: "त्रिशाखैर्बिल्वपत्रैश्च ह्यच्छिद्रैः कोमलैः शुभैः ।\nशिवपूजां करिष्यामि ह्येकबिल्वं शिवार्पणम् ॥२॥",
-                transliteration: "Trishakhairbilvapatraishcha Hyachchidraih Komalaih Shubhaih |\nShivapujam Karishyami Hyekabilvam Shivarpanam ||2||",
-                meaning: "With Bilva leaves of three shoots, which are untorn, soft, and auspicious, I shall perform the worship of Lord Shiva. I offer a single Bilva leaf to Lord Shiva."
-            },
-            {
-                verse: 3,
-                sanskrit: "अखण्डबिल्वपत्रेण पूजिते नन्दिकेश्वरे ।\nशुद्ध्यन्ति सर्वपापेभ्यो ह्येकबिल्वं शिवार्पणम् ॥३॥",
-                transliteration: "Akhanda Bilva Patrena Pujite Nandikeshware |\nShudhyanti Sarva Papebhyo Hyeka Bilvam Shivarpanam ||3||",
-                meaning: "By worshipping Nandikeshvara with an unbroken Bilva leaf, all sins are purified. I offer a single Bilva leaf to Lord Shiva."
-            },
-            {
-                verse: 4,
-                sanskrit: "शालिग्रामशिलामेकां विप्राणां जातु अर्पयेत् ।\nसोमयज्ञमहापुण्यं एकबिल्वं शिवार्पणम् ॥४॥",
-                transliteration: "Shaligrama Shilamekam Vipranam Jatu Arpayet |\nSomayajna Mahapunyam Eka Bilvam Shivarpanam ||4||",
-                meaning: "Offering a single Bilva leaf to Lord Shiva is as meritorious as offering a Shaligrama stone to learned Brahmins or performing the great Soma Yajna."
-            },
-            {
-                verse: 5,
-                sanskrit: "दन्तिकोटिसहस्राणि वाजपेयेशतानि च ।\nकोटिकन्यामहादानं एकबिल्वं शिवार्पणम् ॥५॥",
-                transliteration: "Dantikoti Sahasrani Vajapeya Shatani Cha |\nKoti Kanya Mahadanam Eka Bilvam Shivarpanam ||5||",
-                meaning: "Offering a single Bilva leaf to Lord Shiva is as great as the charity of donating thousands of elephants, performing hundreds of Vajapeya sacrifices, or gifting millions of virgins in marriage."
-            },
-            {
-                verse: 6,
-                sanskrit: "लक्ष्म्याः स्तनत उत्पन्नं महादेवस्य च प्रियम् ।\nबिल्ववृक्षं प्रयच्छामि ह्येकबिल्वं शिवार्पणम् ॥६॥",
-                transliteration: "Lakshmyah Stanamautpannam Mahadevasya Cha Priyam |\nBilva Vriksham Prayachhami Hyeka Bilvam Shivarpanam ||6||",
-                meaning: "Born from the bosom of Goddess Lakshmi and dear to Lord Mahadeva, I offer the Bilva tree (its leaf). I offer a single Bilva leaf to Lord Shiva."
-            },
-            {
-                verse: 7,
-                sanskrit: "दर्शनं बिल्ववृक्षस्य स्पर्शनं पापनाशनम् ।\nअघोरपापसंहारं एकबिल्वं शिवार्पणम् ॥७॥",
-                transliteration: "Darshanam Bilva Vrikshasya Sparshanam Papa Nashanam |\nAghora Papa Samharam Eka Bilvam Shivarpanam ||7||",
-                meaning: "The mere sight of a Bilva tree, and touching it, destroys sins. It destroys even the most terrible sins. I offer a single Bilva leaf to Lord Shiva."
-            },
-            {
-                verse: 8,
-                sanskrit: "मूलतो ब्रह्मरूपाय मध्यतो विष्णुरूपिणे ।\nअग्रतः शिवरूपाय ह्येकबिल्वं शिवार्पणम् ॥८॥",
-                transliteration: "Mulato Brahma Rupaya Madhyato Vishnu Rupine |\nAgratah Shiva Rupaya Hyeka Bilvam Shivarpanam ||8||",
-                meaning: "I offer a single Bilva leaf to Lord Shiva, which at its base is the form of Brahma, in the middle is the form of Vishnu, and at its tip is the form of Shiva himself."
-            },
-            {
-                verse: 9,
-                sanskrit: "बिल्वाष्टकमिदं पुण्यं यः पठेच्छिवसन्निधौ ।\nसर्वपापविनिर्मुक्तः शिवलोकमवाप्नुयात् ॥९॥",
-                transliteration: "Bilvashtakamidam Punyam Yah Pathet Shivasannidhau |\nSarvapapavinirmuktah Shivlokamavapnuyat ||9||",
-                meaning: "Whoever reads this sacred Bilvashtakam in the presence of Shiva will be freed from all sins and will attain the abode of Shiva."
-            }
+             // Verses to be added later
         ],
-        description: "Praises the sacred Bilva leaves offered to Shiva.",
         aiHint: "shiva bilva leaves worship sacred offering",
         image: `https://picsum.photos/seed/bilvashtakam/400/225`
     },
@@ -729,73 +675,13 @@ export const stotrasData: Stotra[] = [
         title: "Shivasahasranama Stotram",
         sanskritTitle: "शिवसहस्रनाम स्तोत्रम्",
         deity: "Shiva",
-        composer: "Puranic source (Mahabharata)",
-        verse_count: "1000+ names",
+        composer: "Puranic source",
+        verse_count: "1000 names",
         theme: "Enumerates the thousand names of Shiva, each representing a divine quality.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "स्थिरः स्थाणुः प्रभुर्भीमः प्रवरो वरदो वरः ।",
-                transliteration: "Sthiraḥ Sthāṇuḥ Prabhurbhīmaḥ Pravaro Varado Varaḥ",
-                meaning: "The Fixed, The Pillar, The Lord, The Formidable, The Excellent, The Boon-Giver, The Best."
-            },
-            {
-                verse: 2,
-                sanskrit: "सर्वात्मा सर्वविख्यातः सर्वः सर्वकरो भवः ॥",
-                transliteration: "Sarvātmā Sarvavikhyātaḥ Sarvaḥ Sarvakaro Bhavaḥ",
-                meaning: "The Soul of All, The All-Known, The All, The Doer of All, The Existence."
-            },
-            {
-                verse: 3,
-                sanskrit: "जटी चर्मी शिखण्डी च सर्वाङ्गः सर्वभावनः ।",
-                transliteration: "Jaṭī Carmī Śikhaṇḍī ca Sarvāṅgaḥ Sarvabhāvanaḥ",
-                meaning: "The One with Matted Hair, The One with Skin (as garment), The One with a Tuft, The One with All Limbs, The Creator of All."
-            },
-            {
-                verse: 4,
-                sanskrit: "हरश्च हरिणाक्षश्च सर्वभूतहरः प्रभुः ॥",
-                transliteration: "Haraśca Hariṇākṣaśca Sarvabhūtaharaḥ Prabhuḥ",
-                meaning: "The Destroyer, The Deer-Eyed, The Destroyer of All Beings, The Lord."
-            },
-            {
-                verse: 5,
-                sanskrit: "प्रवृत्तिश्च निवृत्तिश्च नियतः शाश्वतो ध्रुवः ।",
-                transliteration: "Pravṛttiśca Nivṛttiśca Niyataḥ Śāśvato Dhruvaḥ",
-                meaning: "The Active, The Inactive, The Controlled, The Eternal, The Immovable."
-            },
-            {
-                verse: 6,
-                sanskrit: "श्मशानवासी भगवान् खचरो गोचरोऽर्दनः ॥",
-                transliteration: "Śmaśānavāsī Bhagavān Khacaro Gocaro'rdanaḥ",
-                meaning: "The Dweller in Cremation Grounds, The Divine One, The Sky-Wanderer, The Perceptible, The Punisher."
-            },
-            {
-                verse: 7,
-                sanskrit: "अभिवाद्यो महाकर्मा तपस्वी भूतभावनः ।",
-                transliteration: "Abhivādyo Mahākarmā Tapasvī Bhūtabhāvanaḥ",
-                meaning: "The Worthy of Salutation, The Great in Action, The Ascetic, The Creator of Beings."
-            },
-            {
-                verse: 8,
-                sanskrit: "उन्मत्तवेषप्रच्छन्नः सर्वलोकप्रजापतिः ॥",
-                transliteration: "Unmattaveṣapracchannaḥ Sarvalokaprajāpatiḥ",
-                meaning: "The One disguised in the attire of a madman, The Lord of All Worlds and Beings."
-            },
-            {
-                verse: 9,
-                sanskrit: "महारूपो महाकायो वृषरूपो महायशाः ।",
-                transliteration: "Mahārūpo Mahākāyo Vṛṣarūpo Mahāyaśāḥ",
-                meaning: "The One with a Great Form, The One with a Great Body, The One in the Form of a Bull, The One of Great Fame."
-            },
-            {
-                verse: 10,
-                sanskrit: "महात्मा सर्वभूतात्मा विश्वरूपो महाहनुः ॥",
-                transliteration: "Mahātmā Sarvabhūtātmā Viśvarūpo Mahāhanuḥ",
-                meaning: "The Great Soul, The Soul of All Beings, The Universal Form, The One with a Great Jaw."
-            }
+            // Verses to be added later
         ],
-        description: "The Shivasahasranama enumerates one thousand names of Lord Shiva, with each name highlighting a different attribute of the divine. This stotra, found in the Anushasana Parva of the Mahabharata, is a profound hymn of praise. The verses listed here are just a small selection of the thousand names.",
-        aiHint: "shiva sahasranama thousand names divine qualities mahabharata",
+        aiHint: "shiva sahasranama thousand names divine qualities",
         image: `https://picsum.photos/seed/sahasranama/400/225`
     },
     {
@@ -807,62 +693,8 @@ export const stotrasData: Stotra[] = [
         verse_count: "8 verses",
         theme: "Praises Lord Vishwanatha of Kashi as the granter of liberation.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "गङ्गातरङ्गरमणीयजटाकलापं\nगौरीनिरन्तरविभूषितवामभागम् ।\nनारायणप्रियमनङ्गमदापहारं\nवाराणसीपुरपतिं भज विश्वनाथम् ॥१॥",
-                transliteration: "Ganga Taranga Ramaniya Jata Kalapam\nGauri Nirantara Vibhushita Vama Bhagam |\nNarayana Priyam Ananga Madapaharam\nVaranasi Pura Patim Bhaja Vishvanatham ||1||",
-                meaning: "Worship Vishwanatha, the Lord of Varanasi, whose matted locks are beautified by the waves of the Ganga, whose left side is eternally adorned by Gauri (Parvati), who is dear to Narayana (Vishnu), and who destroyed the pride of the God of Love (Ananga)."
-            },
-            {
-                verse: 2,
-                sanskrit: "वाचामगोचरमनेकगुणस्वरूपं\nवागीशविष्णुसुरसेवितपादपीठम् ।\nवामेन विग्रहवरेण कलत्रवन्तं\nवाराणसीपुरपतिं भज विश्वनाथम् ॥२॥",
-                transliteration: "Vacham Agocharam Aneka Guna Swarupam\nVagisha Vishnu Sura Sevita Pada Pitham |\nVamena Vigraha Varena Kalatravantam\nVaranasi Pura Patim Bhaja Vishvanatham ||2||",
-                meaning: "Worship Vishwanatha, the Lord of Varanasi, who is beyond speech, whose nature has manifold qualities, whose footstool is served by Brahma, Vishnu, and other gods, and who possesses a consort (Parvati) in his excellent left half-form (Ardhanarishvara)."
-            },
-            {
-                verse: 3,
-                sanskrit: "भूताधिपं भुजगभूषणभूषिताङ्गं\nव्याघ्राजिनाम्बरधरं जटिलं त्रिनेत्रम् ।\nपाशाङ्कुशाभयवरप्रदशूलपाणिं\nवाराणसीपुरपतिं भज विश्वनाथम् ॥३॥",
-                transliteration: "Bhutadhipam Bhujaga Bhushana Bhushitangam\nVyaghrajinambaradharam Jatilam Trinetram |\nPashankushabhaya Varaprada Shulapanim\nVaranasi Pura Patim Bhaja Vishvanatham ||3||",
-                meaning: "Worship Vishwanatha, the Lord of Varanasi, the lord of all beings, whose body is adorned with serpent ornaments, who wears a tiger skin, has matted hair, and three eyes. Who holds a noose, a goad, a trident, and bestows the gestures of fearlessness and boons."
-            },
-            {
-                verse: 4,
-                sanskrit: "शीतांशुशोभितकिरीटविराजमानं\nभालेक्षणानलविशोषितपञ्चबाणम् ।\nनागाधिपारचितभासुरकर्णपूरं\nवाराणसीपुरपतिं भज विश्वनाथम् ॥४॥",
-                transliteration: "Shitamshu Shobhita Kirita Virajamanam\nBhalekshananala Vishoshita Panchabanam |\nNagadhipa Rachita Bhasura Karnapuram\nVaranasi Pura Patim Bhaja Vishvanatham ||4||",
-                meaning: "Worship Vishwanatha, the Lord of Varanasi, who shines with a crown beautified by the cool-rayed moon, who dried up the five-arrowed God of Love with the fire from his forehead eye, and whose brilliant ear-ornaments are fashioned by the serpent king."
-            },
-            {
-                verse: 5,
-                sanskrit: "पञ्चाननं दुरितमत्तमतङ्गजानां\nनागान्तकं दनुजपुङ्गवपन्नगानाम् ।\nदावानलं मरणशोकजराटवीनां\nवाराणसीपुरपतिं भज विश्वनाथम् ॥५॥",
-                transliteration: "Panchananam Durita Matta Matangajanam\nNagantakam Danuja Pungava Pannaganam |\nDavanalam Marana Shoka Jaratavinam\nVaranasi Pura Patim Bhaja Vishvanatham ||5||",
-                meaning: "Worship Vishwanatha, the Lord of Varanasi, the five-faced one, who is like a lion (destroyer) to the intoxicated elephants of sin, a destroyer of demons, great men, and serpents. He is a forest fire to the forests of death, sorrow, and old age."
-            },
-            {
-                verse: 6,
-                sanskrit: "तेजोमयं सगुणनिर्गुणमद्वितीयम्\nआनन्दकन्दमपराजितमप्रमेयम् ।\nनागात्मकं सकलनिष्कलमात्मरूपं\nवाराणसीपुरपतिं भज विश्वनाथम् ॥६॥",
-                transliteration: "Tejomayam Saguna Nirgunam Advitiyam\nAnandakandam Aparajitam Aprameyam |\nNagatmakam Sakala Nishkalam Atmarupam\nVaranasi Pura Patim Bhaja Vishvanatham ||6||",
-                meaning: "Worship Vishwanatha, the Lord of Varanasi, who is full of light, with and without attributes, the non-dual one. The root of bliss, unconquered, immeasurable. Whose form is the serpent, who is both with and without parts, the very form of the Self."
-            },
-            {
-                verse: 7,
-                sanskrit: "आशां विहाय परिहृत्य परस्य निन्दां\nपापे रतिं च सुनिवार्य मनः समाधौ ।\nआदाय हृत्कमलमध्यगतं परेशं\nवाराणसीपुरपतिं भज विश्वनाथम् ॥७॥",
-                transliteration: "Asham Vihaya Parihritya Parasya Nindam\nPape Ratim Cha Sunivarya Manah Samadhau |\nAadaya Hritkamalamadhyagatam Paresham\nVaranasi Pura Patim Bhaja Vishvanatham ||7||",
-                meaning: "Having abandoned desires, having given up slandering others, having completely checked the mind's attachment to sin and fixing it in meditation; holding the Supreme Lord in the center of the heart-lotus, worship Vishwanatha, the Lord of Varanasi."
-            },
-            {
-                verse: 8,
-                sanskrit: "रागादिदोषरहितं स्वजनानुरागं\nवैराग्यशान्तिनिलयं गिरिजासहायम् ।\nमाधुर्यधैर्यसुभगं गरलाभिरामं\nवाराणसीपुरपतिं भज विश्वनाथम् ॥८॥",
-                transliteration: "Ragadi Dosha Rahitam Swajananuragam\nVairagya Shanti Nilayam Girija Sahayam |\nMadhurya Dhairya Subhagam Garalabhiramam\nVaranasi Pura Patim Bhaja Vishvanatham ||8||",
-                meaning: "Worship Vishwanatha, the Lord of Varanasi, who is free from faults like attachment, yet is affectionate to his own people. He is the abode of detachment and peace, the companion of Girija (Parvati). He is charming with sweetness and courage, and beautiful with the poison in his throat."
-            },
-            {
-                verse: 9,
-                sanskrit: "वाराणसीपुरपतेः स्तवनं शिवस्य\nयः पठेत् सुक्रियया अष्टकमिदं नरः ।\nस विनीय सर्वपापान् शिवलोकमवाप्नुयात्\nशिवेन सह मोदते ॥९॥",
-                transliteration: "Varanasi Pura Pateh Stavanam Shivasya\nYah Pathet Sukriyaya Ashtakamidam Narah |\nSa Viniya Sarvapapan Shivalokamavapnuyat\nShivena Saha Modate ||9||",
-                meaning: "That person who, with good deeds, recites this hymn of eight verses to Shiva, the Lord of Varanasi, having cast off all sins, attains the world of Shiva and rejoices with Shiva."
-            }
+            // Verses to be added later
         ],
-        description: "Praises Lord Vishwanatha of Kashi as the granter of liberation.",
         aiHint: "shiva vishwanatha kashi liberation ashtakam",
         image: `https://picsum.photos/seed/vishwanathashtakam/400/225`
     },
@@ -875,62 +707,8 @@ export const stotrasData: Stotra[] = [
         verse_count: "8 verses",
         theme: "Devotional praise to Shankara’s compassion and supreme nature.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "तस्मै नमः परमकारणकारणाय\nदीप्तोज्ज्वलज्ज्वलितपिङ्गललोचनाय ।\nनागेन्द्रहारकृतकुण्डलभूषणाय\nब्रह्मेन्द्रविष्णुवरदाय नमः शिवाय ॥१॥",
-                meaning: "Salutations to Him, the cause of the ultimate cause, whose tawny eyes blaze brightly. Who wears the king of snakes as a necklace and earrings, the bestower of boons to Brahma, Indra, and Vishnu. Salutations to Shiva!",
-                transliteration: "Tasmai Namah Parama-Kaaranna-Kaarannaaya\nDiipto[a-U]jjvalaj-Jvalita-Pinggala-Locanaaya |\nNaage[a-I]ndra-Haara-Krta-Kunnddala-Bhuussannaaya\nBrahme[a-I]ndra-Vissnnu-Vara-Daaya Namah Shivaaya ||1||"
-            },
-            {
-                verse: 2,
-                sanskrit: "श्रीमत्प्रसन्नशशिपन्नगभूषणाय\nशैलेन्द्रजावदनचुम्बितलोचनाय ।\nकैलासमन्दरमहेन्द्रनिकेतनाय\nलोकत्रयार्तिहरणाय नमः शिवाय ॥२॥",
-                meaning: "Salutations to Him, adorned with the radiant, pleasing moon and serpents, whose eyes are kissed by the face of the Mountain Lord's daughter (Parvati). Whose abode is Kailasa, Mandara, and Mahendra mountains. The remover of the afflictions of the three worlds. Salutations to Shiva!",
-                transliteration: "Shriimat-Prasanna-Shashi-Pannaga-Bhuussannaaya\nShaile[a-I]ndra-Jaa-Vadana-Cumbita-Locanaaya |\nKailaasa-Mandara-Mahendra-Niketanaaya\nLoka-Traya-[A]arti-Harannaaya Namah Shivaaya ||2||"
-            },
-            {
-                verse: 3,
-                sanskrit: "पद्मावदातमणिकुण्डलगोवृषाय\nकृष्णागरुप्रचुरचन्दनचर्चिताय ।\nभस्मानुषक्तविकचोत्पलमल्लिकाय\nनीलाब्जकण्ठसदृशाय नमः शिवाय ॥३॥",
-                meaning: "Salutations to Him, whose bull mount has earrings like pure lotus gems, who is smeared with abundant dark Agaru and Sandalwood paste. Who is adorned with sacred ash, blooming lotuses, and jasmine. Whose neck resembles a blue lotus. Salutations to Shiva!",
-                transliteration: "Padma-Avadaata-Manni-Kunnddala-Go-Vrssaaya\nKrssnnaagaru-Pracura-Candana-Carcitaaya |\nBhasma-Anussakta-Vikaco[a-U]tpala-Mallikaaya\nNiila-Abja-Kannttha-Sadrshaaya Namah Shivaaya ||3||"
-            },
-            {
-                verse: 4,
-                sanskrit: "लम्बत्सपिङ्गलजटामुकुटोत्कटाय\nदंष्ट्राकरालविकटोत्कटभैरवाय ।\nव्याघ्राजिनाम्बरधराय मनोहराय\nत्रैलोक्यनाथनमिताय नमः शिवाय ॥४॥",
-                meaning: "Salutations to Him, magnificent with a crown of dangling, tawny matted locks. The fierce Bhairava with terrifying fangs. Who wears a tiger skin garment, the captivating one, bowed to by the Lord of the three worlds. Salutations to Shiva!",
-                transliteration: "Lambatsa-Pinggala-Jattaa-Mukutto[a-U]tkattaaya\nDamssttraa-Karaala-Vikatto[a-U]tkatta-Bhairavaaya |\nVyaaghra-Ajina-Ambara-Dharaaya Manoharaaya\nTrai-Lokya-Naatha-Namitaaya Namah Shivaaya ||4||"
-            },
-            {
-                verse: 5,
-                sanskrit: "दक्षप्रजापतिमहामखनाशनाय\nक्षिप्रं महात्रिपुरदानवघातनाय ।\nब्रह्मोर्जितोर्ध्वगकरोटिनिकृन्तनाय\nयोगाय योगनमिताय नमः शिवाय ॥५॥",
-                meaning: "Salutations to Him, the destroyer of Daksha Prajapati's great sacrifice. The swift slayer of the mighty Tripura demons. Who cut off the upward-gone, powerful skull of Brahma. To Yoga itself, bowed to by Yoga. Salutations to Shiva!",
-                transliteration: "Dakssa-Prajaapati-Mahaa-Makha-Naashanaaya\nKssipram Mahaa-Tripura-Daanava-Ghaatanaaya |\nBrahmo[a-Uu]rjito[a-Uu]rdhvaga-Karotti-Nikrntanaaya\nYogaaya Yoga-Namitaaya Namah Shivaaya ||5||"
-            },
-            {
-                verse: 6,
-                sanskrit: "संसारसृष्टिघटनापरिवर्तनाय\nरक्षः पिशाचगणसिद्धसमाकुलाय ।\nसिद्धोरगग्रहगणेन्द्रनिषेविताय\nशार्दूलचर्मवसनाय नमः शिवाय ॥६॥",
-                meaning: "Salutations to Him, who brings about changes in the events of worldly creation. Who is surrounded by Rakshasas, Pishachas, Ganas, and Siddhas. Served by Siddhas, Uragas (serpents), Grahas (planets), and Gana-Indras. Who wears a tiger skin garment. Salutations to Shiva!",
-                transliteration: "Samsaara-Srsstti-Ghattanaa-Parivartanaaya\nRakssah Pishaaca-Ganna-Siddha-Samaakulaaya |\nSiddho(a-U)raga-Graha-Ganne[a-I]ndra-Nissevitaaya\nShaarduula-Carma-Vasanaaya Namah Shivaaya ||6||"
-            },
-            {
-                verse: 7,
-                sanskrit: "भस्माङ्गरागकृतरूपमनोहराय\nसौम्यावदातवनमाश्रितमाश्रिताय ।\nगौरीकटाक्षनयनार्धनिरीक्षनाय\nगोक्षीरधारधवलाय नमः शिवाय ॥७॥",
-                meaning: "Salutations to Him, whose form is captivating with the application of sacred ash. Who is gentle, pure, resorted to by those dwelling in forests. Who is half-seen by the side-glance of Gauri's eyes. Who is white like streams of cow's milk. Salutations to Shiva!",
-                transliteration: "Bhasma-Angga-Raaga-Krta-Ruupa-Manoharaaya\nSaumya-Avadaata-Vanam-Aashritam-Aashritaaya |\nGaurii-Kattaakssa-Nayana-Ardha-Niriikssanaaya\nGo-Kssiira-Dhaara-Dhavalaaya Namah Shivaaya ||7||"
-            },
-            {
-                verse: 8,
-                sanskrit: "आदित्यसोमवरुणानिलसेविताय\nयज्ञाग्निहोत्रवरधूमनिकेतनाय ।\nऋक्सामवेदमुनिभिः स्तुतिसंयुताय\nगोपાય गोपनमिताय नमः शिवाय ॥८॥",
-                meaning: "Salutations to Him, served by Aditya (Sun), Soma (Moon), Varuna, and Anila (Wind). Whose abode is the sacred smoke of Yajna and Agnihotra. Praised with hymns by the sages of Rig and Sama Vedas. The protector, bowed to by the Gopas (or protectors). Salutations to Shiva!",
-                transliteration: "Aaditya-Soma-Varunna-Anila-Sevitaaya\nYajnya-Agnihotra-Vara-Dhuuma-Niketanaaya |\nRk-Saama-Veda-Munibhih Stuti-Samyutaaya\nGopaaya Gopa-Namitaaya Namah Shivaaya ||8||"
-            },
-            {
-                verse: 9,
-                sanskrit: "शिवाष्टकमिदं पुण्यं यः पठेच्छिवसन्निधौ ।\nशिवलोकमवाप्नोति शिवेन सह मोदते ॥९॥",
-                meaning: "Whoever reads this sacred Shivashtakam in the presence of Shiva, attains the abode of Shiva (Shivaloka) and rejoices with Shiva.",
-                transliteration: "Shivaassttakam-Idam Punnyam Yah Patthec-Chiva-Sannidhau |\nShiva-Lokam-Avaapnoti Shivena Saha Modate ||9||"
-            }
+            // Verses to be added later
         ],
-        description: "Devotional praise to Shankara’s compassion and supreme nature.",
         aiHint: "shiva shankara ashtakam compassion devotion",
         image: `https://picsum.photos/seed/shankara-ashtakam/400/225`
     },
@@ -943,56 +721,8 @@ export const stotrasData: Stotra[] = [
         verse_count: "8 verses",
         theme: "Praises the divine river Ganga as flowing from Shiva’s locks.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "भगवति तव तीरे नीरमात्राशनोऽहं\nविगतविषयतृष्णः कृष्णमाराधयामि ।\nसकलकलुषभङ्गे स्वर्गसोपानसङ्गे\nतरलतरतरङ्गे देवि गङ्गे प्रसीद ॥१॥",
-                transliteration: "Bhagavati tava tīre nīramātrāśano'haṁ vigataviṣayatṛṣṇaḥ kṛṣṇamārādhayāmi |\nSakalakaluṣabhaṅge svargasopānasaṅge taralatarataraṅge devi gaṅge prasīda ||1||",
-                meaning: "O Goddess Bhagavati Ganga, residing on your banks, consuming only water, I worship Krishna with my desires for worldly objects gone. O demolisher of all sins, the ladder to heaven, with your gently moving waves, O Devi Ganga, be pleased with me."
-            },
-            {
-                verse: 2,
-                sanskrit: "भगवति भवलीलामौलिमाले तवाम्भः\nकणमणुपरिमाणं प्राणिनो ये स्पृशन्ति ।\nअमरनगरनारीचामरग्राहिणीनां\nविगतकलिकलङ्कातङ्कमङ्के लुठन्ति ॥२॥",
-                transliteration: "Bhagavati bhavalīlāmaulimāle tavāmbhaḥ kaṇamaṇuparimāṇaṁ prāṇino ye spṛśanti |\nAmaranagaranārīcāmaragrāhiṇīnāṁ vigatakalikalankātaṅkamaṅke luṭhanti ||2||",
-                meaning: "O Goddess Bhagavati, you are the garland on the head of Lord Shiva. Those beings who touch even a tiny drop of your water, roll in the laps of the celestial maidens of the city of gods, free from the stains and fears of the Kali Yuga."
-            },
-            {
-                verse: 3,
-                sanskrit: "ब्रह्माण्डं खण्डयन्ती हरशिरसि जटावल्लिमुल्लासयन्ती\nस्वर्लोकादापतन्ती कनकगिरिगुहागण्डशैलात्स्खलन्ती ।\nक्षोणीपृष्ठे लुठन्ती दुरितचयचमूर्निर्भरं भर्त्सयन्ती\nपाथोधिं पूरयन्ती सुरनगरसरित्पावनी नः पुनातु ॥३॥",
-                transliteration: "Brahmāṇḍaṁ khaṇḍayantī haraśirasi jaṭāvallimullāsayantī svarlokādāpatantī kanakagiriguhāgaṇḍaśailātskhayantī | Kṣoṇīpṛṣṭhe luṭhantī duritacayacamūrnirbharaṁ bhartsayantī pāthodhiṁ pūrayantī suranagarasaritpāvanī naḥ punātu ||3||",
-                meaning: "Splitting the universe, she playfully animates the creepers of Shiva's matted hair, descending from heaven, stumbling from the cave-like rocks of the golden mountain (Meru). Rolling on the earth, she fiercely rebukes the armies of sins, filling the ocean. May that purifying river of the city of gods cleanse us."
-            },
-            {
-                verse: 4,
-                sanskrit: "मज्जन्मातङ्गकुम्भच्युतमदमदिरामोदमत्तालिजालं\nस्नानैः सिद्धाङ्गनानां कुचयुगविगलत्कुङ्कुमासङ्गपिङ्गम् ।\nसायं प्रातर्मुनीनां कुशकुसुमचयैश्छिन्नसंकीर्णतीरं\nपायन्नो गाङ्गमम्भः करिकलभमुखाक्रान्तशैवालजालम् ॥४॥",
-                transliteration: "Majjanmātaṅgakumbhacyutamadamadirāmodamattāli jālaṁ snānaiḥ siddhāṅganānāṁ kucayugavigalatkuṅkumāsaṅgapiṅgam | Sāyaṁ prātarmunīnāṁ kuśakusumacayaiśchinnasaṁkīrṇatīraṁ pāyanno gāṅgamambhaḥ karikalabhamukhākrāntaśaivālajālam ||4||",
-                meaning: "May the waters of the Ganga protect us, filled with swarms of bees intoxicated by the fragrance of the ichor-wine flowing from the temples of elephants plunging into it; yellowed by the saffron from the breasts of Siddha women bathing; its banks crowded in the morning and evening with Kusha grass and flowers gathered by sages; its mossy carpets disturbed by the mouths of young elephants."
-            },
-            {
-                verse: 5,
-                sanskrit: "आदावादिपितामहस्य नियमव्यापारपारे जलं\nपश्चात्पन्नगशायिनो भगवतः पादोदकं पावनम् ।\nभूयः शम्भुजटाविभूषणमणोर्धन्येयमुर्वीतले\nदेवी त्रिपथगामिनी भगवती भागीरथी दृश्यते ॥५॥",
-                transliteration: "Ādāvādipitāmahasya niyamavyāpārapāre jalaṁ paścātpannagaśāyino bhagavataḥ pādodakaṁ pāvanam | Bhūyaḥ śambhujatāvibhūṣaṇamaṇordhanyeyamurvītale devī tripathagāminī bhagavatī bhāgīrathī dṛśyate ||5||",
-                meaning: "First, this water was in the kamandalu of the first great father (Brahma) for his ritual duties. Then, it became the purifying water that washed the feet of the Lord who sleeps on a serpent (Vishnu). Again, it became the jewel adorning the matted hair of Shambhu (Shiva). Blessed is this Devi on earth, the divine Bhagirathi who flows in three paths."
-            },
-            {
-                verse: 6,
-                sanskrit: "शैलान्नन्दिनि ते कदा खलु चिरं स्नेहेन विन्ध्याटवी\nगह्वारेषु वसामि तोयतरलैर्हिंस्रैः समं जन्तुभिः ।\nत्यक्त्वा सर्वजनानुकूलविषयं ग्रामं पुरं पत्तनं\nधन्ये पुण्यवति प्रियेऽत्र भवति प्रेम्णा तव श्यामिका ॥६॥",
-                transliteration: "Śailānnandini te kadā khalu ciraṁ snehena vindhyāṭavī gahvāreṣu vasāmi toyataralairhiṁsraiḥ samaṁ jantubhiḥ | Tyaktvā sarvajanānukūlaviṣayaṁ grāmaṁ puraṁ pattanaṁ dhanye puṇyavati priye'tra bhavati premṇā tava śyāmikā ||6||",
-                meaning: "O daughter of the mountain! When will I live for a long time with affection in the caves of the Vindhya forest, along with the wild animals living on your moving waters? Leaving behind villages, cities, and towns that cater to all people, O blessed, holy, and dear one, may I become your loving servant here."
-            },
-            {
-                verse: 7,
-                sanskrit: "अपि प्राज्यं राज्यं तृणमिव परित्यज्य सहसा\nविलीये भावेन त्वदतुलसुखाम्भोरुहवने ।\nरसारङ्गे गङ्गे त्रिभुवनशरीरेऽखिलसुखे\nपुनर्जन्मक्लेशं न खलु लभते त्वद्भजनतः ॥७॥",
-                transliteration: "Api prājyaṁ rājyaṁ tṛṇamiva parityajya sahasā vilīye bhāvena tvadaturasukhāmbhoruhavane | Rasāraṅge gaṅge tribhuvanaśarīre'khilasukhē punarjanmakleśaṁ na khalu labhate tvadbhajanataḥ ||7||",
-                meaning: "Giving up even a great kingdom like a blade of grass, may I instantly dissolve with devotion in the lotus-forest of your incomparable bliss. O Ganga, the stage for spiritual aesthetics, body of the three worlds, the source of all happiness! By worshipping you, one certainly does not receive the pains of rebirth."
-            },
-            {
-                verse: 8,
-                sanskrit: "गङ्गाष्टकमिदं पुण्यं यः पठेत्प्रयतो नरः ।\nसर्वपापविनिर्मुक्तो विष्णुलोकं स गच्छति ॥८॥",
-                transliteration: "Gaṅgāṣṭakamidaṁ puṇyaṁ yaḥ paṭhetprayato naraḥ | Sarvapāpavinirmukto viṣṇulokaṁ sa gacchati ||8||",
-                meaning: "The devoted person who reads this sacred Gangashtakam, freed from all sins, goes to the abode of Vishnu (Vishnuloka)."
-            }
+            // Verses to be added later
         ],
-        description: "Praises the divine river Ganga as flowing from Shiva’s locks.",
         aiHint: "ganga river shiva ashtakam sacred water",
         image: `https://picsum.photos/seed/gangashtakam/400/225`
     },
@@ -1001,66 +731,12 @@ export const stotrasData: Stotra[] = [
         title: "Narmadashtakam",
         sanskritTitle: "नर्मदाष्टकम्",
         deity: "River Narmada (linked to Shiva worship)",
-        composer: "Adi Shankaracharya",
-        verse_count: "9 verses",
+        composer: "Unknown",
+        verse_count: "8 verses",
         theme: "Glorifies the sanctity and purifying power of the Narmada.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "सबिन्दुसिन्धुसुस्खलत्तरङ्गभङ्गरञ्जितं\nद्विषत्सु पापजातजातकारिवारिसंयुतम् ।\nकृतान्तदूतकालभूतभीतिहारिवर्मदे\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥१॥",
-                transliteration: "Sabindusindhususkhalattaraṅgabhaṅgarañjitaṁ dviṣatsu pāpajātajātakārivārisaṁyutam | Kṛtāntadūtakālabhūtabhītihārivarmade tvadīyapādapaṅkajaṁ namāmi devi narmade ||1||",
-                meaning: "O Devi Narmada, whose form is beautified by the gracefully moving waves of the ocean, and whose waters destroy the sins of enemies. O provider of a protective shield against the fear of death's messengers, ghosts, and time itself, I bow to Your lotus feet."
-            },
-            {
-                verse: 2,
-                sanskrit: "त्वदम्बु लीनदीनमीनदिव्यसम्प्रदायकं\nकलौ मलौघभारहारि सर्वतीर्थनायकम् ।\nसुमस्तगुच्छगुच्छद्योतकैसरारुणाधिकं\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥२॥",
-                transliteration: "Tvadambu līnadhīnamīnadivyasampraḍāyakaṁ kalau malaughabhārahāri sarvatīrthanāyakam | Sumastagucchagucchadyotakaisarāruṇādhikaṁ tvadīyapādapaṅkajaṁ namāmi devi narmade ||2||",
-                meaning: "O Devi Narmada, Your waters grant divine states to the humble fish living within them. In this age of Kali, You are the foremost of all holy rivers, removing the burden of impurities. Your beauty surpasses that of a flower cluster with shining red stamens. I bow to Your lotus feet."
-            },
-            {
-                verse: 3,
-                sanskrit: "महागभीरनीरपूरपापधूतभूतलं\nध्वनत्समस्तपातकारिदारितापदाचलम् ।\nजगल्लये महाभये मृकुण्डसूनुहर्म्यदे\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥३॥",
-                transliteration: "Mahāgabhīranīrapūrapāpadhūtabhūtalaṁ dhvanatsamastapātakāridāritāpadācalam | Jagallaye mahābhaye mṛkuṇḍasūnuharmyade tvadīyapādapaṅkajaṁ namāmi devi narmade ||3||",
-                meaning: "O Devi Narmada, Your deep, flowing waters cleanse the sins of the earth. Your roaring sound shatters the mountains of misery created by all sins. During the great fear of cosmic dissolution, You provided refuge to the son of Mrikundu (Markandeya). I bow to Your lotus feet."
-            },
-            {
-                verse: 4,
-                sanskrit: "गतं तदैव मे भयं त्वदम्बु वीक्षितं यदा\nमृकुण्डसूनुशौनकासुरारिसेवितं सदा ।\nपुनर्भवाब्धिजन्मजं भवाब्धिदुःखभर्मदे\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥४॥",
-                transliteration: "Gataṁ tadaiva me bhayaṁ tvadambu vīkṣitaṁ yadā mṛkuṇḍasūnuśaunakāsurārisevitaṁ sadā | Punarbhavābdhijanmajaṁ bhavābdhiduḥkhabharmade tvadīyapādapaṅkajaṁ namāmi devi narmade ||4||",
-                meaning: "O Devi Narmada, my fear vanished the moment I gazed upon Your waters. You are ever served by Markandeya, Shaunaka, and the enemies of demons. You are the remover of the sorrows born from the ocean of rebirth and worldly existence. I bow to Your lotus feet."
-            },
-            {
-                verse: 5,
-                sanskrit: "अलक्ष्यलक्षकिन्नरामरासुरादिपूजितं\nसुलक्ष्यनीरतीरधीरपक्षिलक्षकूजितम् ।\nवसिष्ठशिष्टपिप्पलादिकर्दमादिशर्मदे\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥५॥",
-                transliteration: "Alakṣyalakṣakinnarāmarāsurādipūjitaṁ sulakṣyanīratīradhīrapakṣilakṣakūjitam | Vasiṣṭhaśiṣṭapippalādikardamādiśarmade tvadīyapādapaṅkajaṁ namāmi devi narmade ||5||",
-                meaning: "O Devi Narmada, You are worshipped by countless unseen Kinnaras, Devas, and Asuras. Your beautiful banks echo with the chirping of millions of wise birds. You have bestowed happiness upon great sages like Vasishtha, Pippalada, and Kardama. I bow to Your lotus feet."
-            },
-            {
-                verse: 6,
-                sanskrit: "सनत्कुमारनाचिकेतकश्यपात्रिषट्पदै-\nर्धृतं स्वकीयमानसेषु नारदादिषट्पदैः ।\nरवीन्दुरन्तिदेवदेवराजकर्मशर्मदे\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥६॥",
-                transliteration: "Sanatkumāranāciketakāśyapātriṣaṭpadairdhṛtaṁ svakīyamānaseṣu nāradādiṣaṭpadaiḥ | Ravīndurantidevadevarājakarmaśarmade tvadīyapādapaṅkajaṁ namāmi devi narmade ||6||",
-                meaning: "O Devi Narmada, You are held in the hearts of Sanatkumara, Nachiketa, Kashyapa, and Atri, who are like bees at Your lotus feet. You have granted bliss through their actions to the Sun, Moon, and Indra. I bow to Your lotus feet."
-            },
-            {
-                verse: 7,
-                sanskrit: "अलक्षलक्षलक्षपापलक्षसारसायुधं\nततस्तु जीवजन्तुतन्तुभुक्तिमुक्तिदायकम् ।\nविरिञ्चिविष्णुशङ्करस्वकीयधामवर्मदे\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥७॥",
-                transliteration: "Alakṣalakṣalakṣapāpalakṣasārasāyudhaṁ tatastu jīvajantutantubhuktimuktidāyakam | Viriñciviṣṇuśaṅkarasvakīyadhāmavarmade tvadīyapādapaṅkajaṁ namāmi devi narmade ||7||",
-                meaning: "O Devi Narmada, You are a weapon against countless sins. You grant worldly enjoyment and liberation to all living beings. You provide a protective abode like that of Brahma, Vishnu, and Shankara. I bow to Your lotus feet."
-            },
-            {
-                verse: 8,
-                sanskrit: "अहोऽद्भुतं स्रुतां श्रुतं श्रुतं स्वनं त्विदं त्वयि\nनृणां चति स्फुटं स्फुरत्प्रकृष्टबुद्धिचारु दे ।\nममाऽस्तु देवि भावदात्मजाभिरातिशर्मदे\nत्वदीयपादपङ्कजं नमामि देवि नर्मदे ॥८॥",
-                transliteration: "Aho'dbhutaṁ srutāṁ śrutaṁ śrutaṁ svanaṁ tvidaṁ tvayi nṛṇāṁ cati sphuṭaṁ sphuratprakṛṣṭabuddhicāru de | Mamā'stu devi bhāvadātmajābhirātiśarmade tvadīyapādapaṅkajaṁ namāmi devi narmade ||8||",
-                meaning: "O Devi Narmada, how wonderful is this sound of your flowing waters! Hearing it grants humans clear and sharp intellect. O Devi, daughter of Bhava (Shiva), granter of supreme bliss, may I always revere Your lotus feet. I bow to Your lotus feet."
-            },
-            {
-                verse: 9,
-                sanskrit: "नर्मदाष्टकं इदं तु नित्यमेव यः पठेत्\nसुप्रभाति शुद्धमानसो नरः सदा ।\nस त्वधोगतिं न याति दुर्लभं गतिं लभेत्\nतस्य देवि सर्वदा सुदुर्लभं महेश्वरि ॥९॥",
-                transliteration: "Narmadāṣṭakaṁ idaṁ tu nityameva yaḥ paṭhet suprabhāti śuddhamānaso naraḥ sadā | Sa tvadhogatiṁ na yāti durlabhaṁ gatiṁ labhet tasya devi sarvadā sudurlabhaṁ maheśvari ||9||",
-                meaning: "Whoever recites this Narmadashtakam every day in the morning with a pure mind, will never face downfall and will attain a rare, exalted state. O Devi, O Mahesvari, for them, nothing will ever be difficult to achieve."
-            }
+            // Verses to be added later
         ],
-        description: "Glorifies the sanctity and purifying power of the Narmada.",
         aiHint: "narmada river shiva ashtakam sacred water",
         image: `https://picsum.photos/seed/narmadashtakam/400/225`
     },
@@ -1069,60 +745,12 @@ export const stotrasData: Stotra[] = [
         title: "Kapalika Stotra",
         sanskritTitle: "कपालिक स्तोत्र",
         deity: "Bhairava (Shiva)",
-        composer: "Attributed to Adi Shankaracharya",
-        verse_count: "8 verses",
+        composer: "Unknown",
+        verse_count: "Multiple verses",
         theme: "Praises the Kapalika form of Bhairava, fierce and ascetic.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "भजे व्रजैकमण्डनं समस्तपापखण्डनम् ।\nस्वभक्तचित्तरञ्जनं सदैव नन्दनन्दनम् ॥",
-                transliteration: "bhaje vrajaikamaṇḍanaṃ samastapāpakhaṇḍanam |\nsvabhaktacittarañjanaṃ sadaiva nandanandanam ||",
-                meaning: "I worship the one who is the ornament of Vraja, the destroyer of all sins, who delights the hearts of his devotees, the son of Nanda, forever."
-            },
-            {
-                verse: 2,
-                sanskrit: "सुपिच्छगुच्छमस्तकं सुनादवेणुहस्तकम् ।\nअनङ्गरङ्गसागरं नमामि कृष्णनागरम् ॥",
-                transliteration: "supicchagucchamastakaṃ sunādaveṇuhastakam |\nanaṅgaraṅgasāgaraṃ namāmi kṛṣṇanāgaram ||",
-                meaning: "I bow to Krishna, the charming one, whose head is adorned with a beautiful peacock feather, who holds a melodious flute in his hand, and who is an ocean of the art of love."
-            },
-            {
-                verse: 3,
-                sanskrit: "मनोजगर्वमोचनं विशाललोललोचनम् ।\nविधूतगोपशोचनं नमामि पद्मलोचनम् ॥",
-                transliteration: "manojagarvamocanaṃ viśālalolalocanam |\nvidhūtagopaśocanaṃ namāmi padmalocanam ||",
-                meaning: "I bow to the lotus-eyed one, who destroys the pride of the mind, whose large eyes are ever-moving, and who dispels the sorrows of the cowherds."
-            },
-            {
-                verse: 4,
-                sanskrit: "करारविन्दभूधरं स्मितावलोकसुन्दरम् ।\nमहेन्द्रमानदारणं नमामि कृष्णवारणम् ॥",
-                transliteration: "karāravindabhūdharaṃ smitāvalokasundaram |\nmahendramānadāraṇaṃ namāmi kṛṣṇavāraṇam ||",
-                meaning: "I bow to Krishna, the elephant, who lifts the mountain with his lotus-like hand, whose smiling glance is beautiful, and who shatters the pride of Indra."
-            },
-            {
-                verse: 5,
-                sanskrit: "कदम्बसूनकुण्डलं सुचारुगण्डमण्डलम् ।\nव्रजाङ्गनैकवल्लभं नमामि कृष्णदुर्लभम् ॥",
-                transliteration: "kadambasūnakuṇḍalaṃ sucārugaṇḍamaṇḍalam |\nvrajāṅganaikavallabhaṃ namāmi kṛṣṇadurlabham ||",
-                meaning: "I bow to the rare Krishna, whose earrings are made of Kadamba flowers, whose cheeks are beautifully round, and who is the sole beloved of the women of Vraja."
-            },
-            {
-                verse: 6,
-                sanskrit: "यशोदया समोदया सगोपया सनन्दया ।\nयुतं सुखैकदायकं नमामि गोपनायकम् ॥",
-                transliteration: "yaśodayā samodayā sagopayā sanandayā |\nyutaṃ sukhaikadāyakaṃ namāmi gopanāyakam ||",
-                meaning: "I bow to the leader of the cowherds, who, accompanied by Yashoda, the cowherds, and Nanda, is the sole bestower of happiness."
-            },
-            {
-                verse: 7,
-                sanskrit: "सदैव पादपङ्कजं मदीयमानसे निजम् ।\nदधानमुत्तमालकं नमामि नन्दबालकम् ॥",
-                transliteration: "sadaiva pādapaṅkajaṃ madīyamānase nijam |\ndadhānamuttamālakaṃ namāmi nandabālakam ||",
-                meaning: "I bow to the child of Nanda, who always places his own lotus-like feet in my mind, and who has the most beautiful locks of hair."
-            },
-            {
-                verse: 8,
-                sanskrit: "समस्तदोषशोषणं समस्तलोकपोषणम् ।\nसमस्तगोपमानसं नमामि नन्दलालसम् ॥",
-                transliteration: "samastadoṣaśoṣaṇaṃ samastalokapoṣaṇam |\nsamastagopamānasaṃ namāmi nandalālasam ||",
-                meaning: "I bow to the one who is desired by Nanda, who dries up all faults, nourishes all worlds, and is the mind of all the cowherds."
-            }
+            // Verses to be added later
         ],
-        description: "Praises the Kapalika form of Bhairava, fierce and ascetic.",
         aiHint: "bhairava shiva kapalika fierce ascetic tantra",
         image: `https://picsum.photos/seed/kapalika-stotra/400/225`
     },
@@ -1135,62 +763,8 @@ export const stotrasData: Stotra[] = [
         verse_count: "Multiple verses",
         theme: "Praises the union of Shiva and Parvati as one form.",
         verses: [
-            {
-                verse: 1,
-                sanskrit: "चाम्पेयगौरार्धशरीरकायै कर्पूरगौरार्धशरीरकाय ।\nधम्मिल्लकायै च जटाधराय नमः शिवायै च नमः शिवाय ॥१॥",
-                meaning: "Salutations to Shivai (Parvati) and Salutations to Shiva. To Her whose half-body is golden like a Champaka flower, and to Him whose half-body is white like camphor. To Her with beautifully braided hair, and to Him with matted locks.",
-                transliteration: "cāmpeyagaurārdhaśarīrakāyai karpūragaurārdhaśarīrakāya |\ndhammillakāyai ca jaṭādharāya namaḥ śivāyai ca namaḥ śivāya ||1||"
-            },
-            {
-                verse: 2,
-                sanskrit: "कस्तूरिकाकुङ्कुमचर्चितायै चितारजःपुञ्जविचर्चिताय ।\nकृतस्मरायै विकृतस्मराय नमः शिवायै च नमः शिवाय ॥२॥",
-                meaning: "Salutations to Shivai and Salutations to Shiva. To Her who is smeared with musk and saffron, and to Him who is smeared with the ashes of the funeral pyre. To Her who revived Kama (the God of Love), and to Him who destroyed Kama.",
-                transliteration: "kastūrikākuṅkumacarcitāyai citārajaḥpuñjavicarcitāya |\nkṛtasmarāyai vikṛtasmarāya namaḥ śivāyai ca namaḥ śivāya ||2||"
-            },
-            {
-                verse: 3,
-                sanskrit: "चलत्क्वणत्कङ्कणनूपुरायै पादाब्जराजत्फणिभूषणाय ।\nजगज्जितायै त्रिपुरान्तकाय नमः शिवायै च नमः शिवाय ॥३॥",
-                meaning: "Salutations to Shivai and Salutations to Shiva. To Her with tinkling bracelets and anklets, and to Him whose lotus feet are adorned with shining serpent-ornaments. To Her who conquered the world, and to Him who is the destroyer of the three cities (Tripura).",
-                transliteration: "calatkvaṇatkaṅkaṇanūpurāyai pādābjarājatphaṇibhūṣaṇāya |\njagajjitāyai tripurāntakāya namaḥ śivāyai ca namaḥ śivāya ||3||"
-            },
-            {
-                verse: 4,
-                sanskrit: "विशालनीलोत्पललोचनायै विकासिपङ्केरुहलोचनाय ।\nसमेक्षणायै विषमेक्षणाय नमः शिवायै च नमः शिवाय ॥४॥",
-                meaning: "Salutations to Shivai and Salutations to Shiva. To Her whose eyes are like large blue lotuses, and to Him whose eyes are like full-blown lotuses. To Her with an even number of eyes (two), and to Him with an odd number of eyes (three).",
-                transliteration: "viśālanīlotpalalocanāyai vikāsipaṅkeruhalocanāya |\nsamekṣaṇāyai viṣamekṣaṇāya namaḥ śivāyai ca namaḥ śivāya ||4||"
-            },
-            {
-                verse: 5,
-                sanskrit: "मन्दारमालाकुलितालकायै कपालमालाङ्कितकन्धराय ।\nदिव्याम्बरायै च दिगम्बराय नमः शिवायै च नमः शिवाय ॥५॥",
-                meaning: "Salutations to Shivai and Salutations to Shiva. To Her whose hair is adorned with garlands of Mandara flowers, and to Him whose neck is marked with a garland of skulls. To Her who wears divine garments, and to Him who is clad in the directions (naked).",
-                transliteration: "mandāramālākulitālakāyai kapālamālāṅkitakandharāya |\ndivyāmbarāyai ca digambarāya namaḥ śivāyai ca namaḥ śivāya ||5||"
-            },
-            {
-                verse: 6,
-                sanskrit: "अम्भोधरश्यामलकुन्तलायै तडित्प्रभाताम्रजटाधराय ।\nनिरीश्वरायै निखिलेश्वराय नमः शिवायै च नमः शिवाय ॥६॥",
-                meaning: "Salutations to Shivai and Salutations to Shiva. To Her whose hair is dark like rain clouds, and to Him whose matted locks are coppery like the glow of lightning. To Her who is without a lord, and to Him who is the Lord of All.",
-                transliteration: "ambhodharaśyāmalakuntalāyai taḍitprabhātāmrajaṭādharāya |\nnirīśvarāyai nikhileśvarāya namaḥ śivāyai ca namaḥ śivāya ||6||"
-            },
-            {
-                verse: 7,
-                sanskrit: "प्रपञ्चसृष्ट्युन्मुखलास्यकायै समस्तसंहारकताण्डवाय ।\nजगज्जनन्यै जगदेकपित्रे नमः शिवायै च नमः शिवाय ॥७॥",
-                meaning: "Salutations to Shivai and Salutations to Shiva. To Her whose graceful dance (Lasya) is inclined towards the creation of the universe, and to Him whose fierce dance (Tandava) brings about the destruction of everything. To Her who is the mother of the world, and to Him who is the sole father of the world.",
-                transliteration: "prapañcasṛṣṭyunmukhalāsyakāyai samastasaṃhārakatāṇḍavāya |\njagajjananyai jagadekapitre namaḥ śivāyai ca namaḥ śivāya ||7||"
-            },
-            {
-                verse: 8,
-                sanskrit: "प्रदीप्तरत्नोज्ज्वलकुण्डलायै स्फुरन्महापन्नगभूषणाय ।\nशिवान्वितायै च शिवान्विताय नमः शिवायै च नमः शिवाय ॥८॥",
-                meaning: "Salutations to Shivai and Salutations to Shiva. To Her whose earrings shine brightly with blazing gems, and to Him who is adorned with a great glittering serpent. To Her who is united with Shiva, and to Him who is united with Shivai (Shakti).",
-                transliteration: "pradīptaratnojjvalakuṇḍalāyai sphuranmahāpannagabhūṣaṇāya |\nśivānvitāyai ca śivānvitāya namaḥ śivāyai ca namaḥ śivāya ||8||"
-            },
-            {
-                verse: 9,
-                sanskrit: "एतत् पठेदष्टकमिष्टदं यो भक्त्या स मान्यो भुवि दीर्घजीवी ।\nप्राप्नोति सौभाग्यमनन्तकालं भूयात् सदा तस्य समस्तसिद्धिः ॥९॥",
-                meaning: "He who recites this octet, which bestows wishes, with devotion, will be honored in the world and live a long life. He will attain endless good fortune, and all accomplishments will always be his.",
-                transliteration: "etat paṭhedaṣṭakamiṣṭadaṃ yo bhaktyā sa mānyo bhuvi dīrghajīvī |\nprāpnoti saubhāgyamanantakālaṃ bhūyāt sadā tasya samastasiddhiḥ ||9||"
-            }
+            // Verses to be added later
         ],
-        description: "Praises the union of Shiva and Parvati as one form.",
         aiHint: "ardhanarishvara shiva parvati union half male female",
         image: `https://picsum.photos/seed/ardhanarishvara-stotram/400/225`
     },
@@ -1199,42 +773,12 @@ export const stotrasData: Stotra[] = [
         title: "Mrityunjaya Kavacham",
         sanskritTitle: "मृत्युंजय कवचम्",
         deity: "Shiva (Mrityunjaya)",
-        composer: "Puranic source (Markandeya Purana)",
+        composer: "Puranic source",
         verse_count: "Multiple verses",
         theme: "Protective hymn invoking Shiva’s power over death.",
         verses: [
-             {
-                verse: 0.1,
-                sanskrit: "ॐ अस्य श्रीमहामृत्युञ्जयकवचस्य श्रीभैरव ऋषिः, गायत्री छन्दः, श्रीमहामृत्युञ्जयो देवता, ॐ बीजं, जूं शक्तिः, सः कीलकं, हौं तत्त्वं, चतुर्वर्गसाधने विनियोगः ॥",
-                meaning: "Om. Of this great Mrityunjaya armor (kavacha), the sage is Bhairava, the meter is Gayatri, the deity is Mahamrityunjaya. Om is the seed (bija), Juṁ is the power (shakti), Saḥ is the pin (kilaka), Hauṁ is the principle (tattva). It is employed for achieving the four goals of human life (Dharma, Artha, Kama, Moksha).",
-                transliteration: "om asya śrīmahāmṛtyuñjayakavacasya śrībhairava ṛṣiḥ, gāyatrī chandaḥ, śrīmahāmṛtyuñjayo devatā, oṃ bījaṃ, jūṃ śaktiḥ, saḥ kīlakaṃ, hauṃ tattvaṃ, caturvargasādhane viniyogaḥ ||"
-            },
-            {
-                verse: 1,
-                sanskrit: "ध्यायेन्नित्यं महेशं रजतगिरिनिभं चारुचन्द्रावतंसं\nरत्नाकल्पोज्ज्वलाङ्गं परशुमृगवराभीतिहस्तं प्रसन्नम् ।\nपद्मासीनं समन्तात् स्तुतममरगणैर्व्याघ्रकृत्तिं वसानं\nविश्वाद्यं विश्ववन्द्यं निखिलभयहरं पञ्चवक्त्रं त्रिनेत्रम् ॥",
-                meaning: "One should always meditate on Mahesh, who is like a silver mountain, beautifully adorned with the crescent moon; whose body shines with jeweled ornaments, holding a battle-axe, a deer, and showing gestures of granting boons and fearlessness; seated on a lotus, praised all around by hosts of gods, wearing a tiger skin; the origin of the universe, worshipped by the universe, the remover of all fears, with five faces and three eyes.",
-                transliteration: "dhyāyennityaṃ maheśaṃ rajatagirinibhaṃ cārucandrāvataṃsaṃ ratnākalpojjvalāṅgaṃ paraśumṛgavarābhītihastaṃ prasannam |\npadmāsīnaṃ samantāt stutamamargaṇairvyāghrakṛttiṃ vasānaṃ viśvādyaṃ viśvavandyaṃ nikhilabhayaharaṃ pañcavaktraṃ trinetram ||"
-            },
-            {
-                verse: 2,
-                sanskrit: "शिरो मे महादेवः पातु, भालं पिनाकी ।\nनेत्रे मे त्रिनयनः पातु, कर्णौ पातु महेश्वरः ॥",
-                meaning: "May Mahadeva protect my head, Pinaki protect my forehead. May the Three-Eyed One protect my eyes, may Maheshvara protect my ears.",
-                transliteration: "śiro me mahādevaḥ pātu, bhālaṃ pinākī |\nnetre me trinayanaḥ pātu, karṇau pātu maheśvaraḥ ||"
-            },
-            {
-                verse: 3,
-                sanskrit: "नासिकाम् मे महादेवो, मुखं पातु महेश्वरः ।\nजिह्वां मे वाक्पतिः पातु, दन्तान् मे प्रमथाधिपः ॥",
-                meaning: "May Mahadeva protect my nose, may Maheshvara protect my face. May the Lord of Speech protect my tongue, may the Lord of Pramathas protect my teeth.",
-                transliteration: "nāsikām me mahādevo, mukhaṃ pātu maheśvaraḥ |\njihvāṃ me vākpatiḥ pātu, dantān me pramathādhipaḥ ||"
-            },
-            {
-                verse: 4,
-                sanskrit: "ओष्ठौ पातु उमाकान्तः, कण्ठं मे नीलकण्ठकः ।\nग्रीवां पातु पशुपतिः, स्कन्धौ मे शङ्करस्तथा ॥",
-                meaning: "May Uma's husband protect my lips, may the Blue-Throated One protect my throat. May Pashupati protect my neck, and Shankara protect my shoulders.",
-                transliteration: "oṣṭhau pātu umākāntaḥ, kaṇṭhaṃ me nīlakaṇṭhakaḥ |\ngrīvāṃ pātu paśupatiḥ, skandhau me śaṅkarastathā ||"
-            }
+            // Verses to be added later
         ],
-        description: "Protective hymn invoking Shiva’s power over death.",
         aiHint: "shiva mrityunjaya kavacham protection death conqueror",
         image: `https://picsum.photos/seed/mrityunjaya-kavacham/400/225`
     }
@@ -1249,5 +793,3 @@ export const getAllStotras = (): Stotra[] => {
 export const getStotraById = (id: string): Stotra | undefined => {
   return stotrasData.find(stotra => stotra.id === id);
 };
-
-

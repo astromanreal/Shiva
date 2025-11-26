@@ -7,73 +7,8 @@ import { Badge } from '@/components/ui/badge';
 import TodaysRead from '@/components/home/todays-read'; // Import the new component
 import {
   ArrowRight, Users, Sparkles, Heart, Gem, Mountain, BookOpen, Flame,
-  Shield, Calendar, Star, Users2, Crown, Clock, Zap, Dna, Swords, Atom, Library, Wind, Waves, Brain
+  Shield, Calendar, Star, Users2, Crown, Clock, Zap, Dna, Swords, Atom
 } from 'lucide-react';
-import React from 'react';
-
-// Define the interface for our app cards
-interface AppCardProps {
-  title: string;
-  description: string;
-  link: string;
-  icon: React.ElementType;
-  className?: string;
-}
-
-// Data for the app cards
-const featuredApps: AppCardProps[] = [
-  {
-    title: 'Vaikuntha Digital',
-    description: 'An interactive journey into the divine realm of Mahavishnu. Explore his avatars, stories, and wisdom.',
-    link: 'https://hari-darshan.vercel.app/',
-    icon: Waves,
-    className: 'hover:border-blue-400/50',
-  },
-  {
-    title: 'Sri Hanuman: Embodiment of Devotion',
-    description: 'Discover the divine strength, unwavering devotion, and profound wisdom of Bajrangbali.',
-    link: 'https://hanumaan.vercel.app/',
-    icon: Wind,
-     className: 'hover:border-orange-400/50',
-  },
-  {
-    title: 'Shakti Darshan',
-    description: 'A divine sanctuary to explore the cosmic power of Maa Adi Shakti.',
-    link: 'https://adishakti.vercel.app/',
-    icon: Flame,
-    className: 'hover:border-red-400/50',
-  },
-   {
-    title: 'Sanatan Insights',
-    description: 'Explore sacred texts, uncover timeless teachings, and engage with interactive tools.',
-    link: 'https://sanatan-texts.vercel.app/',
-    icon: Library,
-    className: 'hover:border-yellow-400/50',
-  },
-];
-
-
-const AppCard: React.FC<AppCardProps> = ({ title, description, link, icon: Icon, className }) => (
-  <a href={link} target="_blank" rel="noopener noreferrer" className="block group">
-    <Card className={`h-full flex flex-col justify-between transition-all duration-300 ease-in-out bg-card/70 backdrop-blur-sm group-hover:shadow-xl group-hover:scale-[1.03] border-border/50 ${className}`}>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-3 text-xl text-primary">
-          <Icon className="h-6 w-6" />
-          {title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p className="text-muted-foreground text-sm">{description}</p>
-      </CardContent>
-      <div className="p-6 pt-0">
-        <div className="text-sm font-semibold text-primary flex items-center group-hover:underline">
-          Visit App <ArrowRight className="ml-1.5 h-4 w-4 transition-transform group-hover:translate-x-1" />
-        </div>
-      </div>
-    </Card>
-  </a>
-);
-
 
 export default function Home() {
   return (
@@ -94,37 +29,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Purusartha Journey Section */}
-      <section className="w-full max-w-5xl space-y-4 text-center border-y border-border/20 py-12 bg-secondary/10 rounded-lg">
-        <h2 className="text-3xl font-bold tracking-tight text-primary">Embark on Your Purusartha Journey</h2>
-        <p className="max-w-2xl mx-auto text-muted-foreground">
-          Explore the four aims of human life—Dharma (Duty), Artha (Prosperity), Kama (Desire), and Moksha (Liberation)—in our advanced project dedicated to the Purusarthas.
-        </p>
-        <Button asChild size="lg" className="group">
-          <a href="https://purusartha.vercel.app/" target="_blank" rel="noopener noreferrer">
-            Visit Purusartha Project
-            <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-          </a>
-        </Button>
-      </section>
-
-
       {/* Today's Read Section */}
       <TodaysRead />
-
-      {/* Explore the SanatanVerse Section */}
-      <section className="w-full max-w-6xl space-y-8 py-12">
-        <h2 className="text-3xl font-bold tracking-tight text-center text-primary">Explore the SanatanVerse</h2>
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto">
-          Dive deeper into the vast ocean of Sanatan Dharma with our collection of specialized applications.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
-          {featuredApps.map((app, index) => (
-            <AppCard key={index} {...app} />
-          ))}
-        </div>
-      </section>
-
 
        {/* Mahadeva Detailed Aspects Section */}
        <section className="w-full max-w-6xl space-y-8">
@@ -251,3 +157,4 @@ export default function Home() {
       </section>
     </div>
   );
+}
